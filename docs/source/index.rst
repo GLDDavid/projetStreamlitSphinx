@@ -1,20 +1,17 @@
-.. Streamlit documentation master file, created by
-   sphinx-quickstart on Tue Apr  5 09:02:05 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Streamlit's documentation!
-=====================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Bienvenue dans la documentation de Streamlit!
+===================================
 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Présentation
+-------------------
+
+Le moyen le plus rapide de créer et de partager des applications de données.
+
+**Streamlit** vous permet de transformer des scripts de données en applications Web partageables en quelques minutes. Tout est Python, open-source et gratuit ! Et une fois que vous avez créé une application, vous pouvez utiliser la plateforme cloud ( streamlit cloud ) pour gérer et partager votre application !
+
+Ce framework permet de créer des applications web qui pourront intégrer aisément des modèles de machine learning et des outils de visualisation de données.
+
+Contrairement aux autres framework python (Dash,..) pour créer des applications autour de la données, streamlit permet de créer des applications web sans écrire du code HTML.
+
