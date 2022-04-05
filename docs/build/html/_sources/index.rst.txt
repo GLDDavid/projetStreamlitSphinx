@@ -18,3 +18,4 @@ Contrairement aux autres framework python (Dash,..) pour créer des applications
    :caption: Table des matières:
 
    ./presentation.rst
+   ./defstreamlit.rst
