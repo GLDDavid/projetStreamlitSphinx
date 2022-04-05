@@ -3,7 +3,7 @@ Ressources
 
 .. _liste_ressource:
 
-Listes des ressources utiles
+Liste des ressources utiles
 --------------------------
 
 **Introduction à Streamlit** :
@@ -15,11 +15,17 @@ Listes des ressources utiles
 **Librairie Streamlit** :
     <https://pypi.org/project/streamlit/#history>
 
+**Streamlit Cloud** :
+    <https://streamlit.io/cloud#plans-table>
+
 **La concurence** :
     <https://www.logiciels.pro/logiciel-saas/streamlit/>
 
 **La communauté** :
     <https://discuss.streamlit.io/latest>
+
+**Sécurité** :
+    <https://docs.streamlit.io/streamlit-cloud/trust-and-security>
 
 **Le Roadmap** :
     <https://share.streamlit.io/streamlit/roadmap>

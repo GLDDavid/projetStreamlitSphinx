@@ -3,7 +3,7 @@ Ressources
 
 .. _liste_ressource:
 
-Listes des ressources utiles
+Liste des ressources utiles
 --------------------------
 
 **Introduction à Streamlit** :
@@ -20,6 +20,9 @@ Listes des ressources utiles
 
 **La communauté** :
     <https://discuss.streamlit.io/latest>
+
+**Sécurité** :
+    <https://docs.streamlit.io/streamlit-cloud/trust-and-security>
 
 **Le Roadmap** :
     <https://share.streamlit.io/streamlit/roadmap>

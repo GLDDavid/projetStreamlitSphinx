@@ -1,5 +1,5 @@
 Présentation
-=====================
+============
 
 Historique de la solution
 -------------------------
@@ -24,8 +24,46 @@ Communauté
 ----------
 
 La librairie est mise à jour régulièrement. On peut voir que la dernière version, la 1.7, a été déployée le 2 mars de cette année. Elle est maintenue par Jon Roes, Thiago Teixeira, Ken McGrady et Adrien Treuille.
-Thiago Teixeira est le fondateur de Streamlit.
-Adrien Treuille est le co-fondateur et le CEO de Streamlit
-Jon Roes est le VP de l’Ingénierie.
-Ken McGrady est le manager de l’Ingénierie.
-La communauté est active autant sur github que sur le site web de Streamlit.
+
+* Thiago Teixeira est le fondateur de Streamlit.
+* Adrien Treuille est le co-fondateur et le CEO de Streamlit
+* Jon Roes est le vice-président de l’Ingénierie.
+* Ken McGrady est le manager de l’Ingénierie.
+
+La communauté est active autant sur github que sur le site web de Streamlit dans la partie Forums.
+
+Présentation de la bibliothèque
+-------------------------------
+
+C’est le framework d’application pour les équipes de *Deep/Machine Learning* et de *Data Science*. 
+Streamlit propose des APIs afin de s’intégrer à d’autres librairies informatiques comme Python et TensorFlow. 
+Ces intégrations permettent par exemple de se connecter à une base de données, d’échanger des données, ou bien encore de synchroniser des fichiers entre plusieurs programmes informatiques via une extension, un plugin, ou une API (application programming interface / interface de programmation).
+
+**Streamlit** peut se connecter à plus de 11 librairies afin de faciliter les échanges de données entre applications, d’améliorer le flux de travail, et de gagner en productivité.
+
+Framework en mode SaaS, Streamlit est donc compatible avec la plupart des systèmes d’informations d’entreprises ainsi qu’avec la plupart des systèmes d’exploitation (OS) comme Windows, Mac OS et Linux car il est accessible depuis un navigateur web (Chrome, Firefox, Safari …). 
+**Streamlit** est également accessible à distance (bureau, domicile, en déplacement…) depuis de nombreux appareils mobiles, aussi bien la technologie iOS qu'Android.
+
+* Assistance technique
+L’éditeur qui a développé ce programme informatique offre un support technique ainsi qu’une documentation sur le site officiel. Vous pourrez y retrouver un guide technique complet, une FAQ des questions fréquemment posées, ainsi qu’un forum ou un service support par tickets.
+
+
+* Avantages
+
+	- Partage des apllications
+	- Configuration de l’authentification unique (SSO)
+	- Authentification unique Okta via SAML
+	- Dépannage
+
+* Inconvénients
+
+    - Compromis commodité-flexibilité
+    - Taille de l'entrée des données (50 mb max en téléchargement)
+    - Support limité pour la vidéo/animation
+    - On ne peut pas construire une application avec des fonctionnalités comme :
+        - Authentification des utilisateurs
+        - Abonnement à la newsletter
+        - Interaction entre utilisateurs
+    - Streamlit Cloud gratuit à payant
+    .. figure::  ./_static/images/Cloud.PNG
+        :alt: Formule Cloud

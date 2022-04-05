@@ -23,4 +23,7 @@ Table des matières
 .. toctree::
    presentation
    defstreamlit
+   schema
+   cheatsheet
    ressource
+   
