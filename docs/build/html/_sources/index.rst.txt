@@ -34,4 +34,4 @@ Table des matières
    ./demonstration.rst
    ./application.rst
    ./ressource.rst
-   
+
