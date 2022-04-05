@@ -27,14 +27,11 @@ Table des matières
 --------
 
 .. toctree::
-   presentation
-   defstreamlit
-<<<<<<< HEAD
-   schema
-   cheatsheet
-=======
-   demonstration
-   application
->>>>>>> 3e421654cecaddd75f07648759c43be3af6e65c0
-   ressource
+   ./presentation.rst
+   ./defstreamlit.rst
+   ./schema.rst
+   ./cheatsheet.rst
+   ./demonstration.rst
+   ./application.rst
+   ./ressource.rst
    

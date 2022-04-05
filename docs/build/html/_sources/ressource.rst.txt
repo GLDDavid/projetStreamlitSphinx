@@ -15,6 +15,9 @@ Liste des ressources utiles
 **Librairie Streamlit** :
     <https://pypi.org/project/streamlit/#history>
 
+**Streamlit Cloud** :
+    <https://streamlit.io/cloud#plans-table>
+
 **La concurence** :
     <https://www.logiciels.pro/logiciel-saas/streamlit/>
 
