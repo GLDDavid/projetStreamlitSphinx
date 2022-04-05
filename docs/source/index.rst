@@ -13,6 +13,12 @@ Ce framework permet de créer des applications web qui pourront intégrer aisém
 Contrairement aux autres framework python (Dash,..) pour créer des applications autour de la données, streamlit permet de créer des applications web sans écrire du code HTML.
 
 
+Lien
+----------
+Une petite :doc:`demonstration`
+
+Envie de démarrer directement ? Suivez le guide avec :doc:`application`
+
 Consulter la section :doc:`ressource` pour plus d'informations, ou accéder directement à la :ref:`liste<liste_ressource>` des ressources.
 
 
@@ -23,7 +29,12 @@ Table des matières
 .. toctree::
    presentation
    defstreamlit
+<<<<<<< HEAD
    schema
    cheatsheet
+=======
+   demonstration
+   application
+>>>>>>> 3e421654cecaddd75f07648759c43be3af6e65c0
    ressource
    
