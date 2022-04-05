@@ -1,7 +1,6 @@
 Bienvenue dans la documentation de Streamlit!
 ===================================
 
-
 Présentation
 -------------------
 
