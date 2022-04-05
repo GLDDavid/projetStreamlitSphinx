@@ -15,6 +15,8 @@ Contrairement aux autres framework python (Dash,..) pour créer des applications
 
 Lien
 ----------
+Une petite :doc:`demonstration`
+
 Envie de démarrer directement ? Suivez le guide avec :doc:`application`
 
 Consulter la section :doc:`ressource` pour plus d'informations, ou accéder directement à la :ref:`liste<liste_ressource>` des ressources.
@@ -27,5 +29,6 @@ Table des matières
 .. toctree::
    presentation
    defstreamlit
+   demonstration
    application
    ressource
