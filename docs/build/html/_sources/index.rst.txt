@@ -2,8 +2,6 @@ Bienvenue dans la documentation de Streamlit!
 ===================================
 
 
-
-
 Présentation
 -------------------
 
@@ -20,9 +18,10 @@ Consulter la section :doc:`ressource` pour plus d'informations, ou accéder dire
 
 
 
-Contents
+Table des matières
 --------
 
 .. toctree::
-
+   presentation
+   defstreamlit
    ressource

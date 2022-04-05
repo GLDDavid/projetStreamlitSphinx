@@ -2,8 +2,6 @@ Bienvenue dans la documentation de Streamlit!
 ===================================
 
 
-
-
 Présentation
 -------------------
 
@@ -24,5 +22,6 @@ Table des matières
 --------
 
 .. toctree::
-
+   presentation
+   defstreamlit
    ressource
