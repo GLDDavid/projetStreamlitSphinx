@@ -7,7 +7,7 @@ Bienvenue dans la documentation de Streamlit!
 Présentation
 -------------------
 
-Le moyen le plus rapide de créer et de partager des applications de données.
+Le moyen le plus rapide de créer et de partager des applications de données. Bonjour
 
 **Streamlit** vous permet de transformer des scripts de données en applications Web partageables en quelques minutes. Tout est Python, open-source et gratuit ! Et une fois que vous avez créé une application, vous pouvez utiliser la plateforme cloud ( streamlit cloud ) pour gérer et partager votre application !
 
