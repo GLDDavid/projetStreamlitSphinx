@@ -19,7 +19,7 @@ Dans VSCode, vous allez créer un fichier:
 Que l’on va laisser vide pour le moment.
 
 Nous allons maintenant ouvrir le terminal dans VSCode avec le raccourci clavier **ctrl ù** et nous allons créer un environ virtuel.
-
+ 
 .. code-block:: python
     :linenos:
 
@@ -28,7 +28,6 @@ Nous allons maintenant ouvrir le terminal dans VSCode avec le raccourci clavier 
     cd Scripts
     activate
     cd../..
-
 
 Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports.
 
@@ -120,24 +119,26 @@ Nous allons créer une sidebar afin de positionner différents widgets
 
 On peut constater que sur notre application une sidebar a été créée et que nous avons les 3 villes unique présente dans notre dataframe
 
-On va donc copier et coller ce bloc de code pour faire la même chose avec les customer et le gender
+Vous allez maintenant faire la même chose avec les customer et le gender
 
-.. code-block:: python
-    :linenos:
-    :caption: app.py
-    :name: app-py
+.. toggle::
+   
+    .. code-block:: python
+        :linenos:
+        :caption: app.py
+        :name: app-py
 
-    customer_type = st.sidebar.multiselect(
-        "Selection du type de client:",
-        options=df['Customer_type'].unique(),
-        default=df['Customer_type'].unique()
-    )
+        customer_type = st.sidebar.multiselect(
+            "Selection du type de client:",
+            options=df['Customer_type'].unique(),
+            default=df['Customer_type'].unique()
+        )
 
-    gender = st.sidebar.multiselect(
-        "Selection du sexe:",
-        options=df['Gender'].unique(),
-        default=df['Gender'].unique()
-    )
+        gender = st.sidebar.multiselect(
+            "Selection du sexe:",
+            options=df['Gender'].unique(),
+            default=df['Gender'].unique()
+        )
 
 
 Avoir différents filtres c'est bien, mais encore faut-il que tout soit dynamique. Pour cela, il va falloir lier nos filtres à notre dataframe
@@ -310,27 +311,29 @@ Passons à notre graphique. On va pouvoir récupérer les valeurs de la colonne 
     ventes_par_heures = df_selection.groupby(by=['hour']).sum()[['Total']]
 
 
-Puis on va construire notre bar_chart
+Puis vous allez construire le prochain bar_chart
 
-.. code-block:: python
-    :linenos:
-    :caption: app.py
-    :name: app-py
+.. toggle::
+   
+    .. code-block:: python
+        :linenos:
+        :caption: app.py
+        :name: app-py
 
-    fig_vente_heures = px.bar(
-        ventes_par_heures,
-        x=ventes_par_heures.index,
-        y='Total',
-        title="<b>Ventes par heure</b>",
-        color_discrete_sequence=["#0083B8"] * len(ventes_par_heures),
-        template="plotly_white",
-    )
-    fig_vente_heures.update_layout(
-        xaxis=dict(tickmode="linear"),
-        plot_bgcolor="rgba(0,0,0,0)",
-        yaxis=(dict(showgrid=False)),
-    )
-    st.plotly_chart(fig_vente_heures)
+        fig_vente_heures = px.bar(
+            ventes_par_heures,
+            x=ventes_par_heures.index,
+            y='Total',
+            title="<b>Ventes par heure</b>",
+            color_discrete_sequence=["#0083B8"] * len(ventes_par_heures),
+            template="plotly_white",
+        )
+        fig_vente_heures.update_layout(
+            xaxis=dict(tickmode="linear"),
+            plot_bgcolor="rgba(0,0,0,0)",
+            yaxis=(dict(showgrid=False)),
+        )
+        st.plotly_chart(fig_vente_heures)
 
 
 **Mazette! Que c'est beau**.

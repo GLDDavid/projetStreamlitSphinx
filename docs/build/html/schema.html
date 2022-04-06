@@ -9,6 +9,7 @@
         <title>Fonctionnalités - Streamlit documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     
     
@@ -132,7 +133,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -141,8 +142,11 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/streamlit_logo.svg" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">Streamlit  documentation</span>
   
@@ -186,7 +190,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -194,9 +198,18 @@
         <article role="main">
           <section id="fonctionnalites">
 <h1>Fonctionnalités<a class="headerlink" href="#fonctionnalites" title="Permalink to this headline">#</a></h1>
+<section id="mode-de-fonctionnement-de-streamlit">
+<h2>Mode de fonctionnement de Streamlit<a class="headerlink" href="#mode-de-fonctionnement-de-streamlit" title="Permalink to this headline">#</a></h2>
 <figure class="align-center">
 <img alt="Schema Streamlit" src="_images/Schema.PNG"/>
 </figure>
+</section>
+<section id="schema-vue-utilisateur">
+<h2>Schéma vue utilisateur<a class="headerlink" href="#schema-vue-utilisateur" title="Permalink to this headline">#</a></h2>
+<figure class="align-center">
+<img alt="Schema composant" src="_images/Schema_composant.PNG"/>
+</figure>
+</section>
 </section>
 
         </article>
@@ -244,8 +257,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Fonctionnalités</a><ul>
+<li><a class="reference internal" href="#mode-de-fonctionnement-de-streamlit">Mode de fonctionnement de Streamlit</a></li>
+<li><a class="reference internal" href="#schema-vue-utilisateur">Schéma vue utilisateur</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -255,5 +288,10 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     </body>
 </html>

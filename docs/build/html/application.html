@@ -9,6 +9,7 @@
         <title>Application - Streamlit documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     
     
@@ -141,8 +142,11 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/streamlit_logo.svg" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">Streamlit  documentation</span>
   
@@ -278,7 +282,8 @@ Dans app.py nous allons écrire ce code.</p>
 </div>
 </div>
 <p>On peut constater que sur notre application une sidebar a été créée et que nous avons les 3 villes unique présente dans notre dataframe</p>
-<p>On va donc copier et coller ce bloc de code pour faire la même chose avec les customer et le gender</p>
+<p>Vous allez maintenant faire la même chose avec les customer et le gender</p>
+<div class="toggle docutils container">
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">app.py</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">customer_type</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">multiselect</span><span class="p">(</span>
@@ -293,6 +298,7 @@ Dans app.py nous allons écrire ce code.</p>
 <span class="linenos">10</span>    <span class="n">default</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'Gender'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 <span class="linenos">11</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 <p>Avoir différents filtres c’est bien, mais encore faut-il que tout soit dynamique. Pour cela, il va falloir lier nos filtres à notre dataframe</p>
@@ -427,7 +433,8 @@ Nous allons le placer dans une fonction, on va s’occuper du cache et on n’ou
 </pre></div>
 </div>
 </div>
-<p>Puis on va construire notre bar_chart</p>
+<p>Puis vous allez construire le prochain bar_chart</p>
+<div class="toggle docutils container">
 <div class="literal-block-wrapper docutils container" id="id15">
 <div class="code-block-caption"><span class="caption-text">app.py</span><a class="headerlink" href="#id15" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">fig_vente_heures</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
@@ -445,6 +452,7 @@ Nous allons le placer dans une fonction, on va s’occuper du cache et on n’ou
 <span class="linenos">13</span><span class="p">)</span>
 <span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig_vente_heures</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 <p><strong>Mazette! Que c’est beau</strong>.
@@ -719,5 +727,10 @@ Simple et Efficace, c’est COOL Streamlit.</p>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     </body>
 </html>

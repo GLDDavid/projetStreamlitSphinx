@@ -9,6 +9,7 @@
         <title>Ressources - Streamlit documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     
     
@@ -141,8 +142,11 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/streamlit_logo.svg" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">Streamlit  documentation</span>
   
@@ -222,15 +226,7 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="index.html">
-            <div class="page-info">
-              <div class="context">
-                <span>Next</span>
-              </div>
-              <div class="title">Home</div>
-            </div>
-            <svg><use href="#svg-arrow-right"></use></svg>
-          </a>
+          
           <a class="prev-page" href="application.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
@@ -292,5 +288,10 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     </body>
 </html>
