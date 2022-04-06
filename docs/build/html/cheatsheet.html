@@ -133,7 +133,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -190,7 +190,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -198,6 +198,366 @@
         <article role="main">
           <section id="cheatsheet">
 <h1>CheatSheet !<a class="headerlink" href="#cheatsheet" title="Permalink to this headline">#</a></h1>
+<section id="installer-et-importer">
+<h2>Installer et importer<a class="headerlink" href="#installer-et-importer" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">pip</span> <span class="n">install</span> <span class="n">streamlit</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+</pre></div>
+</div>
+</section>
+<section id="ligne-de-commande">
+<h2>Ligne de commande<a class="headerlink" href="#ligne-de-commande" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Aide</span>
+<span class="linenos"> 2</span><span class="n">streamlit</span> <span class="o">--</span><span class="n">help</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Pour lancer l’application</span>
+<span class="linenos"> 5</span><span class="n">streamlit</span> <span class="n">run</span> <span class="n">your_script</span><span class="o">.</span><span class="n">py</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Pour lancer l’application par défaut</span>
+<span class="linenos"> 8</span><span class="n">streamlit</span> <span class="n">hello</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Affiche toutes les informations de configuration</span>
+<span class="linenos">11</span><span class="n">streamlit</span> <span class="n">config</span> <span class="n">show</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Efface les fichiers persistants du cache</span>
+<span class="linenos">14</span><span class="n">streamlit</span> <span class="n">cache</span> <span class="n">clear</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Ouvre la documentation streamlit dan un navigateur</span>
+<span class="linenos">17</span><span class="n">streamlit</span> <span class="n">docs</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Pour connaître la version installée de streamlit</span>
+<span class="linenos">20</span><span class="n">streamlit</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</section>
+<section id="commandes-magiques">
+<h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Permalink to this headline">#</a></h2>
+<p>Les commandes magiques sont une fonctionnalité de Streamlit qui vous permet d’écrire presque n’importe quoi (markdown, données, graphiques) sans avoir à taper une commande explicite.
+Placez simplement l’élément que vous souhaitez afficher sur sa propre ligne de code et il apparaîtra dans votre application.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Magic commands implicitly</span>
+<span class="linenos">2</span><span class="c1"># call st.write().</span>
+<span class="linenos">3</span><span class="s1">'_This_ is some **Markdown***'</span>
+<span class="linenos">4</span><span class="n">my_variable</span>
+<span class="linenos">5</span><span class="s1">'dataframe:'</span><span class="p">,</span> <span class="n">my_data_frame</span>
+</pre></div>
+</div>
+</section>
+<section id="afficher-le-texte">
+<h2>Afficher le texte<a class="headerlink" href="#afficher-le-texte" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Pour afficher un bloc de texte</span>
+<span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Fixed width text'</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Pour afficher un texte façon markdown</span>
+<span class="linenos"> 5</span><span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s1">'_Markdown_'</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Affichez des expressions mathématiques</span>
+<span class="linenos"> 8</span><span class="n">st</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">''' e^{i\pi} + 1 = 0 '''</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Permet de passer des arguments</span>
+<span class="linenos">11</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Most objects'</span><span class="p">)</span> <span class="c1"># df, err, func, keras!</span>
+<span class="linenos">12</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="s1">'st'</span><span class="p">,</span> <span class="s1">'is &lt;'</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="c1"># see *</span>
+<span class="linenos">13</span><span class="c1"># Afficher le texte dans la mise en forme du titre</span>
+<span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'My title'</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Afficher le texte dans le format d'en-tête.</span>
+<span class="linenos">17</span><span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s1">'My header'</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Afficher le texte en format de sous-en-tête</span>
+<span class="linenos">20</span><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s1">'My sub'</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Affichez un bloc de code avec une coloration syntaxique facultative</span>
+<span class="linenos">23</span><span class="n">st</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">'for i in range(8): foo()'</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="afficher-les-donnees">
+<h2>Afficher les données<a class="headerlink" href="#afficher-les-donnees" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Pour afficher un bloc de texte</span>
+<span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Fixed width text'</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Pour afficher un texte façon markdown</span>
+<span class="linenos"> 5</span><span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s1">'_Markdown_'</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Affichez des expressions mathématiques</span>
+<span class="linenos"> 8</span><span class="n">st</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">''' e^{i\pi} + 1 = 0 '''</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Permet de passer des arguments</span>
+<span class="linenos">11</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Most objects'</span><span class="p">)</span> <span class="c1"># df, err, func, keras!</span>
+<span class="linenos">12</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="s1">'st'</span><span class="p">,</span> <span class="s1">'is &lt;'</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="c1"># see *</span>
+<span class="linenos">13</span><span class="c1"># Afficher le texte dans la mise en forme du titre</span>
+<span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'My title'</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Afficher le texte dans le format d'en-tête.</span>
+<span class="linenos">17</span><span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s1">'My header'</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Afficher le texte en format de sous-en-tête</span>
+<span class="linenos">20</span><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s1">'My sub'</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Affichez un bloc de code avec une coloration syntaxique facultative</span>
+<span class="linenos">23</span><span class="n">st</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">'for i in range(8): foo()'</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="afficher-les-medias">
+<h2>Afficher les médias<a class="headerlink" href="#afficher-les-medias" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Afficher une image ou une liste d'images.</span>
+<span class="linenos">2</span><span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">'./header.png'</span><span class="p">)</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># Affichez un lecteur audio.</span>
+<span class="linenos">5</span><span class="n">st</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="c1"># Afficher un lecteur vidéo.</span>
+<span class="linenos">8</span><span class="n">st</span><span class="o">.</span><span class="n">video</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="ajouter-des-widgets-a-la-barre-laterale">
+<h2>Ajouter des widgets à la barre latérale<a class="headerlink" href="#ajouter-des-widgets-a-la-barre-laterale" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Afficher un widget de bouton radio</span>
+<span class="linenos">2</span><span class="c1"># dans la sidebar</span>
+<span class="linenos">3</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s1">'Select one:'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1"># Avec l’utilisation de ‘With’:</span>
+<span class="linenos">6</span><span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="p">:</span>
+<span class="linenos">7</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">st</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s1">'Select one:'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="colonnes">
+<h2>Colonnes<a class="headerlink" href="#colonnes" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># 2 colonnes égales:</span>
+<span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="o">&gt;&gt;&gt;</span> <span class="n">col1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"This is column 1"</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="o">&gt;&gt;&gt;</span> <span class="n">col2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"This is column 2"</span><span class="p">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># 3 colonnes différentes:</span>
+<span class="linenos"> 8</span><span class="o">&gt;&gt;&gt;</span> <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">col3</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="linenos"> 9</span><span class="c1"># col1 is larger.</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># En utilisant le ‘With’:</span>
+<span class="linenos">13</span><span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">col1</span><span class="p">:</span>
+<span class="linenos">14</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">st</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s1">'Select one:'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="flux-de-controle">
+<h2>Flux de contrôle<a class="headerlink" href="#flux-de-controle" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Arreter l’execution  immédiatement:</span>
+<span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Relance le script immédiatement:</span>
+<span class="linenos"> 5</span><span class="n">st</span><span class="o">.</span><span class="n">experimental_rerun</span><span class="p">()</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Groupe multiple de widgets:</span>
+<span class="linenos"> 9</span><span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">form</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">'my_form'</span><span class="p">):</span>
+<span class="linenos">10</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">username</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s1">'Username'</span><span class="p">)</span>
+<span class="linenos">11</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">password</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s1">'Password'</span><span class="p">)</span>
+<span class="linenos">12</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">st</span><span class="o">.</span><span class="n">form_submit_button</span><span class="p">(</span><span class="s1">'Login'</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="afficher-des-widgets-interactifs">
+<h2>Afficher des widgets interactifs<a class="headerlink" href="#afficher-des-widgets-interactifs" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Afficher un widget bouton</span>
+<span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s1">'Click me'</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Afficher un widget de case à cocher</span>
+<span class="linenos"> 5</span><span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s1">'I agree'</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Afficher un widget de bouton radio.</span>
+<span class="linenos"> 8</span><span class="n">st</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s1">'Pick one'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'cats'</span><span class="p">,</span> <span class="s1">'dogs'</span><span class="p">])</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Afficher un widget de selection</span>
+<span class="linenos">11</span><span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s1">'Pick one'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'cats'</span><span class="p">,</span> <span class="s1">'dogs'</span><span class="p">])</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Afficher un widget de selection multiple</span>
+<span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">multiselect</span><span class="p">(</span><span class="s1">'Buy'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'milk'</span><span class="p">,</span> <span class="s1">'apples'</span><span class="p">,</span> <span class="s1">'potatoes'</span><span class="p">])</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Afficher un curseur</span>
+<span class="linenos">17</span><span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'Pick a number'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Afficher un widget en curseur pour sélectionner un élément dans une liste</span>
+<span class="linenos">20</span><span class="n">st</span><span class="o">.</span><span class="n">select_slider</span><span class="p">(</span><span class="s1">'Pick a size'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'S'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'L'</span><span class="p">])</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Afficher un widget de saisie de texte en une seule ligne</span>
+<span class="linenos">23</span><span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s1">'First name'</span><span class="p">)</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1"># Afficher un widget de saisie numérique</span>
+<span class="linenos">26</span><span class="n">st</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s1">'Pick a number'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1"># Afficher un widget de saisie de texte multiligne</span>
+<span class="linenos">29</span><span class="n">st</span><span class="o">.</span><span class="n">text_area</span><span class="p">(</span><span class="s1">'Text to translate'</span><span class="p">)</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="c1"># Afficher un widget de saisie de date</span>
+<span class="linenos">32</span><span class="n">st</span><span class="o">.</span><span class="n">date_input</span><span class="p">(</span><span class="s1">'Your birthday'</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="c1"># Afficher un widget d’entrée de temps</span>
+<span class="linenos">35</span><span class="n">st</span><span class="o">.</span><span class="n">time_input</span><span class="p">(</span><span class="s1">'Meeting time'</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="c1"># Afficher un widget de téléchargement de fichiers</span>
+<span class="linenos">38</span><span class="n">st</span><span class="o">.</span><span class="n">file_uploader</span><span class="p">(</span><span class="s1">'Upload a CSV'</span><span class="p">)</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="c1"># Afficher un widget qui renvoie les images de la webcam de l’utilisateur</span>
+<span class="linenos">41</span><span class="n">st</span><span class="o">.</span><span class="n">camera_input</span><span class="p">(</span><span class="s1">'Take a picture'</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span><span class="c1"># Afficher un widget bouton de téléchargement</span>
+<span class="linenos">44</span><span class="n">st</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span><span class="s1">'Download file'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="linenos">45</span>
+<span class="linenos">46</span><span class="c1"># Afficher un widget de sélection de couleur</span>
+<span class="linenos">47</span><span class="n">st</span><span class="o">.</span><span class="n">color_picker</span><span class="p">(</span><span class="s1">'Pick a color'</span><span class="p">)</span>
+<span class="linenos">48</span>
+<span class="linenos">49</span><span class="c1">#Utiliser les valeurs renvoyées par les widgets dans la variable:</span>
+<span class="linenos">50</span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s1">'Num:'</span><span class="p">))):</span>
+<span class="linenos">51</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">foo</span><span class="p">()</span>
+<span class="linenos">52</span><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s1">'I:'</span><span class="p">,[</span><span class="s1">'f'</span><span class="p">])</span> <span class="o">==</span> <span class="s1">'f'</span><span class="p">:</span>
+<span class="linenos">53</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">b</span><span class="p">()</span>
+<span class="linenos">54</span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_slider_val</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'Quinn Mallory'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">88</span><span class="p">)</span>
+<span class="linenos">55</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)</span>
+<span class="linenos">56</span>
+<span class="linenos">57</span><span class="c1">#Désactiver les widgets pour supprimer l'interactivité:</span>
+<span class="linenos">58</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'Pick a number'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="muter-les-donnees">
+<h2>Muter les données<a class="headerlink" href="#muter-les-donnees" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Ajouter des lignes à un dataframe.</span>
+<span class="linenos">2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+<span class="linenos">3</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1"># Ajouter des lignes à un graphique.</span>
+<span class="linenos">6</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+<span class="linenos">7</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="code-d-affichage">
+<h2>Code d’affichage<a class="headerlink" href="#code-d-affichage" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">echo</span><span class="p">():</span>
+<span class="linenos">2</span><span class="gp">&gt;&gt;&gt; </span>  <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Code will be executed and printed'</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="espaces-reserves-aide-et-options">
+<h2>Espaces réservés, aide et options<a class="headerlink" href="#espaces-reserves-aide-et-options" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Remplacer n’importe quel élément.</span>
+<span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>
+<span class="linenos"> 3</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># Remplace le précédent.</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># Insertion dans le désordre</span>
+<span class="linenos"> 7</span><span class="o">&gt;&gt;&gt;</span> <span class="n">elements</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">()</span>
+<span class="linenos"> 8</span><span class="o">&gt;&gt;&gt;</span> <span class="n">elements</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+<span class="linenos">10</span><span class="o">&gt;&gt;&gt;</span> <span class="n">elements</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># Apparaît au-dessus de "Hello".</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">st</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span>
+<span class="linenos">13</span><span class="n">st</span><span class="o">.</span><span class="n">get_option</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="linenos">15</span><span class="n">st</span><span class="o">.</span><span class="n">set_page_config</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="s1">'wide'</span><span class="p">)</span>
+<span class="linenos">16</span><span class="n">st</span><span class="o">.</span><span class="n">experimental_show</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span>
+<span class="linenos">17</span><span class="n">st</span><span class="o">.</span><span class="n">experimental_get_query_params</span><span class="p">()</span>
+<span class="linenos">18</span><span class="n">st</span><span class="o">.</span><span class="n">experimental_set_query_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="optimiser-les-performances">
+<h2>Optimiser les performances<a class="headerlink" href="#optimiser-les-performances" title="Permalink to this headline">#</a></h2>
+<section id="mise-en-cache-heritee">
+<h3>Mise en cache héritée<a class="headerlink" href="#mise-en-cache-heritee" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@st</span><span class="o">.</span><span class="n">cache</span>
+<span class="linenos"> 2</span><span class="gp">... </span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
+<span class="linenos"> 3</span><span class="gp">... </span>  <span class="c1"># Do something expensive in here...</span>
+<span class="linenos"> 4</span><span class="gp">... </span>  <span class="k">return</span> <span class="n">data</span>
+<span class="linenos"> 5</span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Exécute foo</span>
+<span class="linenos"> 6</span><span class="gp">&gt;&gt;&gt; </span><span class="n">d1</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref1</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># N’exécute pas foo</span>
+<span class="linenos"> 8</span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Renvoie l’élément mis en cache par référence, d1 == d2</span>
+<span class="linenos"> 9</span><span class="gp">&gt;&gt;&gt; </span><span class="n">d2</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref1</span><span class="p">)</span>
+<span class="linenos">10</span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Arg différent, donc la fonction foo s’exécute</span>
+<span class="linenos">11</span><span class="gp">&gt;&gt;&gt; </span><span class="n">d3</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref2</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="objets-de-donnees-en-cache">
+<h3>Objets de données en cache<a class="headerlink" href="#objets-de-donnees-en-cache" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Par exemple : Calcul de dataframe, stockage des données téléchargées, …</span>
+<span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="nd">@st</span><span class="o">.</span><span class="n">experimental_memo</span>
+<span class="linenos"> 3</span><span class="o">...</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
+<span class="linenos"> 4</span><span class="o">...</span>   <span class="c1"># Faire quelque chose et renvoyer des données</span>
+<span class="linenos"> 5</span><span class="o">...</span>   <span class="k">return</span> <span class="n">data</span>
+<span class="linenos"> 6</span><span class="c1"># Execute foo</span>
+<span class="linenos"> 7</span><span class="o">&gt;&gt;&gt;</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref1</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="c1"># N’exécute pas foo</span>
+<span class="linenos"> 9</span><span class="c1"># Renvoie l’élément mis en cache par valeur, d1 == d2</span>
+<span class="linenos">10</span><span class="o">&gt;&gt;&gt;</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref1</span><span class="p">)</span>
+<span class="linenos">11</span><span class="c1"># arg différent, donc la fonction foo s’exécute</span>
+<span class="linenos">12</span><span class="o">&gt;&gt;&gt;</span> <span class="n">d3</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref2</span><span class="p">)</span>
+<span class="linenos">13</span><span class="c1"># Effacer toutes les entrées en cache pour cette fonction</span>
+<span class="linenos">14</span><span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">15</span><span class="c1"># Effacer les valeurs de *toutes* les fonctions mémorisées</span>
+<span class="linenos">16</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">experimental_memo</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="mettre-en-cache-des-objets-autres-que-des-donnees">
+<h3>Mettre en cache des objets autres que des données<a class="headerlink" href="#mettre-en-cache-des-objets-autres-que-des-donnees" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Exemple : Session TensorFlow, connexion à la base de données, ...</span>
+<span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="nd">@st</span><span class="o">.</span><span class="n">experimental_singleton</span>
+<span class="linenos"> 3</span><span class="o">...</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
+<span class="linenos"> 4</span><span class="o">...</span>   <span class="c1"># Créer et renvoyer un objet</span>
+<span class="linenos"> 5</span><span class="o">...</span>   <span class="k">return</span> <span class="n">session</span>
+<span class="linenos"> 6</span><span class="c1"># Exécute foo</span>
+<span class="linenos"> 7</span><span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref1</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="c1"># N’exécute pas foo</span>
+<span class="linenos"> 9</span><span class="c1"># Renvoie l’élément mis en cache par référence, d1 == d2</span>
+<span class="linenos">10</span><span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref1</span><span class="p">)</span>
+<span class="linenos">11</span><span class="c1"># arg différent, donc la fonction foo s’exécute</span>
+<span class="linenos">12</span><span class="o">&gt;&gt;&gt;</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref2</span><span class="p">)</span>
+<span class="linenos">13</span><span class="c1"># Effacer toutes les entrées en cache pour cette fonction</span>
+<span class="linenos">14</span><span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">15</span><span class="c1"># Effacer toutes les singleton caches</span>
+<span class="linenos">16</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">experimental_singleton</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="afficher-la-progression-et-l-etat">
+<h2>Afficher la progression et l’état<a class="headerlink" href="#afficher-la-progression-et-l-etat" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">spinner</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">'In progress'</span><span class="p">):</span>
+<span class="linenos"> 2</span><span class="gp">&gt;&gt;&gt; </span>  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="gp">&gt;&gt;&gt; </span>  <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s1">'Done'</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="go"># Afficher la barre de progression</span>
+<span class="linenos"> 6</span><span class="go">st.progress(progress_variable_1_to_100)</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="go"># Dessiner des ballons de fête</span>
+<span class="linenos"> 9</span><span class="go">st.balloons()</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="go"># Dessiner des chutes de neiges festives</span>
+<span class="linenos">12</span><span class="go">st.snow()</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="go"># Afficher le message d’erreur</span>
+<span class="linenos">15</span><span class="go">st.error('Error message')</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="go"># Afficher le message d’avertissement</span>
+<span class="linenos">18</span><span class="go">st.warning('Warning message')</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="go"># Afficher un message d’information</span>
+<span class="linenos">21</span><span class="go">st.info('Info message')</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="go"># Afficher un message de réussite</span>
+<span class="linenos">24</span><span class="go">st.success('Success message')</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="go"># Afficher une exception</span>
+<span class="linenos">27</span><span class="go">st.exception(e)</span>
+</pre></div>
+</div>
+</section>
 </section>
 
         </article>
@@ -245,8 +605,46 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">CheatSheet !</a><ul>
+<li><a class="reference internal" href="#installer-et-importer">Installer et importer</a></li>
+<li><a class="reference internal" href="#ligne-de-commande">Ligne de commande</a></li>
+<li><a class="reference internal" href="#commandes-magiques">Commandes magiques</a></li>
+<li><a class="reference internal" href="#afficher-le-texte">Afficher le texte</a></li>
+<li><a class="reference internal" href="#afficher-les-donnees">Afficher les données</a></li>
+<li><a class="reference internal" href="#afficher-les-medias">Afficher les médias</a></li>
+<li><a class="reference internal" href="#ajouter-des-widgets-a-la-barre-laterale">Ajouter des widgets à la barre latérale</a></li>
+<li><a class="reference internal" href="#colonnes">Colonnes</a></li>
+<li><a class="reference internal" href="#flux-de-controle">Flux de contrôle</a></li>
+<li><a class="reference internal" href="#afficher-des-widgets-interactifs">Afficher des widgets interactifs</a></li>
+<li><a class="reference internal" href="#muter-les-donnees">Muter les données</a></li>
+<li><a class="reference internal" href="#code-d-affichage">Code d’affichage</a></li>
+<li><a class="reference internal" href="#espaces-reserves-aide-et-options">Espaces réservés, aide et options</a></li>
+<li><a class="reference internal" href="#optimiser-les-performances">Optimiser les performances</a><ul>
+<li><a class="reference internal" href="#mise-en-cache-heritee">Mise en cache héritée</a></li>
+<li><a class="reference internal" href="#objets-de-donnees-en-cache">Objets de données en cache</a></li>
+<li><a class="reference internal" href="#mettre-en-cache-des-objets-autres-que-des-donnees">Mettre en cache des objets autres que des données</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#afficher-la-progression-et-l-etat">Afficher la progression et l’état</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
