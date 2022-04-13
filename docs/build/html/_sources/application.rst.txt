@@ -314,7 +314,7 @@ Passons à notre graphique. On va pouvoir récupérer les valeurs de la colonne 
 Puis vous allez construire le prochain bar_chart
 
 .. toggle::
-   
+
     .. code-block:: python
         :linenos:
         :caption: app.py

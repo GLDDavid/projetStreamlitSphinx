@@ -198,26 +198,27 @@
         <article role="main">
           <section id="demonstration">
 <h1>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this headline">#</a></h1>
-<section id="effet-wahou-garanti">
-<h2>Effet WAHOU Garanti<a class="headerlink" href="#effet-wahou-garanti" title="Permalink to this headline">#</a></h2>
+<section id="effet-waouh-garanti">
+<h2>Effet WAOUH Garanti<a class="headerlink" href="#effet-waouh-garanti" title="Permalink to this headline">#</a></h2>
 <p>Vous l’avez compris, STREAMLIT est génial.
-Nous allons ici vous faire une démonstration de streamlit.</p>
+Nous allons ici faire une démonstration de Streamlit.</p>
 <p>Partons à la découverte de ce framework.</p>
 <p>Pour commencer nous allons faire quelques lignes de commande dans le terminal.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">cd</span> <span class="n">Documents</span>
 <span class="linenos"> 2</span>    <span class="n">mkdir</span> <span class="n">demoStreamlit</span>
-<span class="linenos"> 3</span>    <span class="n">cd</span> <span class="n">exoStreamlit</span>
+<span class="linenos"> 3</span>    <span class="n">cd</span> <span class="n">demoStreamlit</span>
 <span class="linenos"> 4</span>            <span class="n">MAC</span>                                     <span class="n">Windows</span>
-<span class="linenos"> 5</span>    <span class="n">touch</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>           <span class="n">ou</span>      <span class="nb">type</span> <span class="n">nul</span> <span class="o">&gt;</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+<span class="linenos"> 5</span>    <span class="n">touch</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>                   <span class="n">ou</span>              <span class="nb">type</span> <span class="n">nul</span> <span class="o">&gt;</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
 <span class="linenos"> 6</span>    <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
 <span class="linenos"> 7</span><span class="n">cd</span><span class="o">..</span>
 <span class="linenos"> 8</span>            <span class="n">MAC</span>                                     <span class="n">Windows</span>
-<span class="linenos"> 9</span>    <span class="n">ls</span> <span class="n">demoStreamlit</span>            <span class="n">ou</span>      <span class="nb">dir</span> <span class="n">demoStreamlit</span>
+<span class="linenos"> 9</span>    <span class="n">ls</span> <span class="n">demoStreamlit</span>            <span class="n">ou</span>                  <span class="nb">dir</span> <span class="n">demoStreamlit</span>
 <span class="linenos">10</span>    <span class="n">exit</span>
 </pre></div>
 </div>
+<p>La commande dir ou ls nous permet de voir que nous avons bien la présence d’un fichier main.py et d’un dossier venv.</p>
 <p>Allons maintenant dans notre éditeur de code VSCode. On ouvre le dossier demoStreamlit et avec <strong>ctrl ù</strong> on ouvre un terminal.
-Pas un powershell</p>
+Pas un powershell mais bien un command prompt.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="n">cd</span> <span class="n">venv</span>
 <span class="linenos">2</span>    <span class="n">cd</span> <span class="n">Scripts</span>
 <span class="linenos">3</span>    <span class="n">activate</span>
@@ -229,7 +230,7 @@ Pas un powershell</p>
 <p>Et voilà, vous venez de créer une application web de machine learning.
 Elle est bien évidement Responsive( inspecter et choisir différente taille d’écran).</p>
 <p>Dans la sidebar sur la gauche vous avez la possibilité de choisir différentes Démo.</p>
-<p>On va maintenant faire un CTRL C dans le terminal de VSCODE (avant de fermer la page)</p>
+<p>On va maintenant faire un <strong>ctrl c</strong> dans le terminal de VSCode (avant de fermer la page)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="n">streamlit</span> <span class="n">run</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
@@ -237,7 +238,7 @@ Elle est bien évidement Responsive( inspecter et choisir différente taille d�
 <p>Sur l’app streamlit, aller sur le menu burger à droite. Dans settings ou Réglages, cocher la case Run on save ou exécuter à la sauvegarde afin de relancer notre application à chaque sauvegarde dans VSCode.
 C’est quand même plus sympa.</p>
 <p>Maintenant dans main.py</p>
-<p>Nous allons va écrire notre fameux HELLO WORLD !
+<p>Nous allons écrire notre fameux HELLO WORLD !
 C’est truc à faire quand on est un pro du web.
 Il va quand même falloir importer streamlit</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
@@ -245,10 +246,10 @@ Il va quand même falloir importer streamlit</p>
 <span class="linenos">3</span>    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Hello, world !'</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Petit raccourci clavier <strong>ctrl s</strong> pour sauvegarder dans VSCode</p>
 <figure class="align-center">
 <img alt="gif effet wahou" src="_images/unicorn-magic.gif"/>
 </figure>
-<p>Petit raccourci clavier <strong>ctrl s</strong> pour sauvegarder dans VSCode</p>
 <p>Nous allons avec un slider faire une opération mathématique comme par exemple le carré de x</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="c1"># 2</span>
 <span class="linenos">2</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
@@ -268,8 +269,12 @@ et afficher en dessous mon tableau de données filtrées</p>
 </pre></div>
 </div>
 <p>Maintenant on va aller sur &lt;<a class="reference external" href="https://github.com/streamlit">https://github.com/streamlit</a>&gt; et sur <strong>demo-uber-nyc-pickups</strong>.
-On va copier le code streamlit_app.py à partir de la ligne 18 jusqu’à la fin et il faut télécharger le fichier uber-raw-data-sep14.csv.gz et le mettre dans exoStreamlit</p>
-<p>On peut également supprimer tout ce que l’on a fait avant dans main.py</p>
+On va copier le code streamlit_app.py à partir de la ligne 18 jusqu’à la fin et il faut télécharger le fichier uber-raw-data-sep14.csv.gz et le mettre dans demoStreamlit</p>
+<p>On peut également supprimer tout ce que l’on a fait avant dans main.py.
+Cependant il faut garder :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+</pre></div>
+</div>
 <p>Un petit peu de code :</p>
 <p>On peut faire un titre</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Mon Titre"</span><span class="p">)</span>
@@ -280,7 +285,7 @@ On va copier le code streamlit_app.py à partir de la ligne 18 jusqu’à la fin
 </pre></div>
 </div>
 <p>Il est également possible de faire du markdown</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"# bla bla bla encore du texte"</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"# Mon Titre"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Il est possible par exemple d’utiliser une balise markdown à la place de write pour écrire un bloc de texte et gérer des espaces avec des #</p>
@@ -288,20 +293,20 @@ On va copier le code streamlit_app.py à partir de la ligne 18 jusqu’à la fin
 <span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
 <span class="linenos"> 3</span>    <span class="sd">"""</span>
 <span class="linenos"> 4</span><span class="sd">###</span>
-<span class="linenos"> 5</span><span class="sd">Examining how Uber pickups vary over time in New York City's and at its major regional airports.</span>
-<span class="linenos"> 6</span><span class="sd">By sliding the slider on the left you can view different slices of time and explore different transportation trends.</span>
+<span class="linenos"> 5</span><span class="sd">Examiner comment les ramassages Uber varient au fil du temps à New York et dans ses principaux aéroports régionaux.</span>
+<span class="linenos"> 6</span><span class="sd">En faisant glisser le curseur sur la gauche, vous pouvez afficher différentes tranches de temps et explorer différentes tendances en matière de transport.</span>
 <span class="linenos"> 7</span><span class="sd">"""</span>
 <span class="linenos"> 8</span><span class="p">)</span>
 <span class="linenos"> 9</span><span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
 <span class="linenos">10</span>    <span class="sd">"""</span>
 <span class="linenos">11</span><span class="sd">#</span>
-<span class="linenos">12</span><span class="sd">Examining how Uber pickups vary over time in New York City's and at its major regional airports.</span>
-<span class="linenos">13</span><span class="sd">By sliding the slider on the left you can view different slices of time and explore different transportation trends.</span>
+<span class="linenos">12</span><span class="sd">Examiner comment les ramassages Uber varient au fil du temps à New York et dans ses principaux aéroports régionaux.</span>
+<span class="linenos">13</span><span class="sd">En faisant glisser le curseur sur la gauche, vous pouvez afficher différentes tranches de temps et explorer différentes tendances en matière de transport.</span>
 <span class="linenos">14</span><span class="sd">"""</span>
 <span class="linenos">15</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Plus on va mettre de # (limite : 6) moins l’espace sera important
+<p>Plus on va mettre de # (limite : 6) moins l’espace sera important.
 Bien faire attention à <strong>“””</strong></p>
 <p>On va maintenant tout effacer et on va faire une partie de cette appli.
 Donc on supprime tout et on va écrire :</p>
@@ -352,6 +357,25 @@ Donc on supprime tout et on va écrire :</p>
 <span class="linenos">3</span>    <span class="s1">'## Filtre sélectionner </span><span class="si">%s</span><span class="s1">h'</span> <span class="o">%</span> <span class="n">hour</span><span class="p">,</span> <span class="n">data</span>
 </pre></div>
 </div>
+<p>Et si on faisait une petite carte avec st.map</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="s1">'## GEO Data à </span><span class="si">%s</span><span class="s1">h'</span><span class="o">%</span><span class="n">hour</span>
+<span class="linenos">2</span>    <span class="n">st</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Bien évidemment tout est intéractif. C’est à dire que si je change l’heure dans mon code, mon dataframe va changer mais aussi la carte</p>
+<p>Et si on faisais un slider pour sélectionner une heure ???</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="c1">#hour = 10</span>
+<span class="linenos">2</span>    <span class="n">hour</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'heure'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>OK alors plutôt que d’avoir le slider juste au dessus de mon dataframe, si je faisais une sidebar (ouh la la, trop difficile…)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="c1">#hour = 10</span>
+<span class="linenos">2</span>    <span class="c1">#hour = st.slider('heure', 0, 23, 10)</span>
+<span class="linenos">3</span>    <span class="n">hour</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'heure'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ah et bien NON en fait. C’est trop génial Streamlit.</p>
+<p>On passe à l’application ??</p>
 </section>
 </section>
 
@@ -413,7 +437,7 @@ Donc on supprime tout et on va écrire :</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Demonstration</a><ul>
-<li><a class="reference internal" href="#effet-wahou-garanti">Effet WAHOU Garanti</a></li>
+<li><a class="reference internal" href="#effet-waouh-garanti">Effet WAOUH Garanti</a></li>
 </ul>
 </li>
 </ul>

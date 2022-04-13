@@ -18,12 +18,12 @@ Streamlit propose une plateforme pour le domaine du machine learning et de la da
 Objectifs de la bibliothèque
 ----------------------------
 
-Streamlit est une bibliothèque Python open-source qui permet de créer et de partager facilement de belles applications web.Elle est compatible avec la majeure partie des librairies Python tel que scikit-learn, numpy, pandas, pytorchs, keras, matplotlib, etc
+Streamlit est une bibliothèque Python open-source qui permet de créer et de partager facilement de belles applications web. Elle est compatible avec la majeure partie des librairies Python tel que scikit-learn, numpy, pandas, pytorchs, keras, matplotlib, etc
 
 Communauté
 ----------
 
-La librairie est mise à jour régulièrement. On peut voir que la dernière version, la 1.7, a été déployée le 2 mars de cette année. Elle est maintenue par Jon Roes, Thiago Teixeira, Ken McGrady et Adrien Treuille.
+La librairie est mise à jour régulièrement. On peut voir que la dernière version, la 1.7, a été déployée le 2 mars de cette année (nous sommes en 2022). Elle est maintenue par Jon Roes, Thiago Teixeira, Ken McGrady et Adrien Treuille.
 
 * Thiago Teixeira est le fondateur de Streamlit.
 * Adrien Treuille est le co-fondateur et le CEO de Streamlit
