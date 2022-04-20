@@ -221,7 +221,7 @@ Puis on va ouvrir ce dossier avec VSCode.</p>
 <span class="linenos">5</span><span class="n">cd</span><span class="o">../..</span>
 </pre></div>
 </div>
-<p>Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports.</p>
+<p>Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports. Pour cela vous pouvez récupérer le dossier file_streamlit dans lequel vous allez trouver les fichiers nécessaire pour cette application.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
@@ -239,6 +239,8 @@ Dans app.py nous allons écrire ce code.</p>
 </pre></div>
 </div>
 <p>A ce stade, une fenêtre doit s’ouvrir dans votre navigateur avec une application streamlit dans laquelle nous pouvons voir le formidable Hello world !</p>
+<p>Sur l’app streamlit, aller sur le menu burger à droite. Dans settings ou Réglages, cocher la case Run on save ou exécuter à la sauvegarde afin de relancer notre application à chaque sauvegarde dans VSCode.
+C’est quand même plus sympa.</p>
 <p>Il est possible de fermer l’application avec l’instruction ctrl c dans le terminal</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">ctrl</span> <span class="n">c</span>
 </pre></div>
@@ -283,7 +285,8 @@ Dans app.py nous allons écrire ce code.</p>
 </div>
 </div>
 <p>On peut constater que sur notre application une sidebar a été créée et que nous avons les 3 villes unique présente dans notre dataframe</p>
-<p>Vous allez maintenant faire la même chose avec les customer et le gender</p>
+<p>Vous allez maintenant faire la même chose avec les customer_type et le gender.
+Pour voir le code, il suffit de cliquer sur le bouton en dessous.</p>
 <div class="toggle docutils container">
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">app.py</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
@@ -310,6 +313,7 @@ Dans app.py nous allons écrire ce code.</p>
 <span class="linenos">3</span><span class="p">)</span>
 <span class="linenos">4</span>
 <span class="linenos">5</span><span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df_selection</span><span class="p">)</span>
+<span class="linenos">6</span><span class="c1"># supprimer l'autre st.dataframe(df)</span>
 </pre></div>
 </div>
 </div>
@@ -514,14 +518,15 @@ Mais non, rassurez vous, nous allons juste masquer certains éléments comme par
 </div>
 <p>Enfin si on va en faire du <strong>CSS</strong> parce que j’aime beaucoup cela.
 Je vais vous envoyer un dossier <strong>.streamlit</strong> dans lequel il y a un fichier <strong>config.toml</strong>
-C’est dans ce fichier que l’on va pouvoir placer tout notre css, enfin les quleques lignes.</p>
+C’est dans ce fichier que l’on va pouvoir placer tout notre css, enfin les quelques lignes.</p>
 <p>Il ne reste plus qu’à faire un ** ctrl c** dans le terminal et de relancer l’application afin de voir les changements de style.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">ctrl</span> <span class="n">c</span>
 <span class="linenos">2</span><span class="n">streamlit</span> <span class="n">run</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Et voilà, vous avez maintenant une application streamlit fonctionelle. Vous pouvez utiliser HEROKU ou streamlit cloud pour que n’importe qui dans le monde utilise votre application.
-Simple et Efficace, c’est COOL Streamlit.</p>
+Simple et Efficace.</p>
+<p>C’est COOL Streamlit.</p>
 <div class="literal-block-wrapper docutils container" id="id22">
 <div class="code-block-caption"><span class="caption-text">app.py</span><a class="headerlink" href="#id22" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>

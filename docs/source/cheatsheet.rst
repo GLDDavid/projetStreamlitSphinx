@@ -32,17 +32,18 @@ Ligne de commande
     # Efface les fichiers persistants du cache
     streamlit cache clear
 
-    # Ouvre la documentation streamlit dan un navigateur
+    # Ouvre la documentation streamlit dans un navigateur
     streamlit docs
 
-    # Pour connaître la version installée de streamlit 
+    # Pour connaître la version installée de streamlit
     streamlit --version
 
 Commandes magiques
 ------------------
 
 Les commandes magiques sont une fonctionnalité de Streamlit qui vous permet d'écrire presque n'importe quoi (markdown, données, graphiques) sans avoir à taper une commande explicite. 
-Placez simplement l'élément que vous souhaitez afficher sur sa propre ligne de code et il apparaîtra dans votre application.
+
+Placer simplement l'élément que vous souhaitez afficher sur sa propre ligne de code et il apparaîtra dans votre application.
 
 .. code-block:: python
     :linenos:
@@ -69,38 +70,8 @@ Afficher le texte
     st.latex(r''' e^{i\pi} + 1 = 0 ''')
 
     # Permet de passer des arguments
-    st.write('Most objects') # df, err, func, keras!
-    st.write(['st', 'is <', 3]) # see *
-    # Afficher le texte dans la mise en forme du titre
-    st.title('My title')
-
-    # Afficher le texte dans le format d'en-tête.
-    st.header('My header')
-
-    # Afficher le texte en format de sous-en-tête
-    st.subheader('My sub')
-
-    # Affichez un bloc de code avec une coloration syntaxique facultative
-    st.code('for i in range(8): foo()')
-
-Afficher les données
---------------------
-
-.. code-block:: python
-    :linenos:
-
-    # Pour afficher un bloc de texte
-    st.text('Fixed width text')
-
-    # Pour afficher un texte façon markdown
-    st.markdown('_Markdown_')
-
-    # Affichez des expressions mathématiques
-    st.latex(r''' e^{i\pi} + 1 = 0 ''')
-
-    # Permet de passer des arguments
-    st.write('Most objects') # df, err, func, keras!
-    st.write(['st', 'is <', 3]) # see *
+    st.write('Most objects') # df, err, func!
+    st.write(['st', 'is <', 3])
     # Afficher le texte dans la mise en forme du titre
     st.title('My title')
 

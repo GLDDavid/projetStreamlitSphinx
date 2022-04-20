@@ -201,10 +201,10 @@
 <h1>Qu’est-ce que Streamlit ?<a class="headerlink" href="#qu-est-ce-que-streamlit" title="Permalink to this headline">#</a></h1>
 <section id="principes">
 <h2>Principes<a class="headerlink" href="#principes" title="Permalink to this headline">#</a></h2>
-<p>Le moyen le plus rapide de créer et de partager des applications de données.
-Streamlit vous permet de transformer des scripts de données en applications Web partageables en quelques minutes. Tout est Python, open-source et gratuit ! Et une fois que vous avez créé une application, vous pouvez utiliser la plateforme cloud ( streamlit cloud ) pour gérer et partager votre application !
-Ce framework permet de créer des applications web qui pourront intégrer aisément des modèles de machine learning et des outils de visualisation de données.
-Contrairement aux autres framework python (Dash,..) pour créer des applications autour de la données, <strong>Streamlit</strong> permet de créer des applications web sans écrire du code HTML.</p>
+<p>Le moyen le plus rapide de créer et de partager des applications de données.</p>
+<p><strong>Streamlit</strong> vous permet de transformer des scripts de données en applications Web partageables en quelques minutes. Tout est Python, open-source et gratuit ! Et une fois que vous avez créé une application, vous pouvez utiliser la plateforme cloud ( streamlit cloud ) pour gérer et partager votre application !</p>
+<p>Ce framework permet de créer des applications web qui pourront intégrer aisément des modèles de machine learning et des outils de visualisation de données.</p>
+<p>Contrairement aux autres framework python (Dash,..) pour créer des applications autour de la données, <strong>Streamlit</strong> permet de créer des applications web sans écrire du code HTML.</p>
 </section>
 <section id="technologies">
 <h2>Technologies<a class="headerlink" href="#technologies" title="Permalink to this headline">#</a></h2>
@@ -226,15 +226,15 @@ Les données de ce framework sont hébergées sur un serveur informatique (stock
 <div><ul class="simple">
 <li><p>Authentification unique</p></li>
 </ul>
-<p>Tous les accès et connexions à Streamlit sont effectués via un fournisseur SSO : GitHub, GSuite et de nombreuses autres plates-formes sont prises en charge. Nous pouvons travailler avec votre équipe informatique pour intégrer le fournisseur de votre choix. Nous ne stockons pas les mots de passe des clients.</p>
+<p>Tous les accès et connexions à Streamlit sont effectués via un fournisseur SSO : GitHub, GSuite et de nombreuses autres plates-formes sont prises en charge. Nous pouvons travailler avec notre équipe informatique pour intégrer le fournisseur de votre choix. Streamlit ne stocke pas les mots de passe des clients.</p>
 <ul class="simple">
 <li><p>Stockage des identifiants</p></li>
 </ul>
-<p>Nous chiffrons les données sensibles des clients (par exemple, les secrets, les jetons d’authentification) au repos avec AES256, comme décrit dans la documentation de Google.</p>
+<p>Streamlit chiffre les données sensibles des clients (par exemple, les secrets, les jetons d’authentification) au repos avec AES256, comme décrit dans la documentation de Google.</p>
 <ul class="simple">
 <li><p>Autorisations et contrôle d’accès basé sur les rôles</p></li>
 </ul>
-<p>Nos niveaux d’autorisation héritent des autorisations que vous avez attribuées dans GitHub. Les utilisateurs disposant d’un accès en écriture à un référentiel GitHub pour une application donnée pourront apporter des modifications dans la console d’administration Streamlit.</p>
+<p>Les niveaux d’autorisation héritent des autorisations que nous avons attribuées dans GitHub. Les utilisateurs disposant d’un accès en écriture à un référentiel GitHub pour une application donnée pourront apporter des modifications dans la console d’administration Streamlit.</p>
 <p>Seuls les utilisateurs disposant d’un accès administrateur à un référentiel peuvent déployer et supprimer des applications .</p>
 </div></blockquote>
 </li>
@@ -243,23 +243,23 @@ Les données de ce framework sont hébergées sur un serveur informatique (stock
 <div><ul class="simple">
 <li><p>Hébergement de données</p></li>
 </ul>
-<p>Notre infrastructure physique est hébergée et gérée au sein de Google Cloud Platform (GCP) à l’aide de leurs centres de données sécurisés. Streamlit exploite de nombreuses fonctionnalités de sécurité, de confidentialité et de redondance intégrées à la plate-forme. GCP surveille en permanence ses centres de données pour détecter les risques et se soumet à des évaluations pour garantir la conformité aux normes de l’industrie. Les centres de données de GCP disposent de nombreuses accréditations, notamment ISO-27001, SOC 1 et SOC 2.</p>
+<p>L’infrastructure physique est hébergée et gérée au sein de Google Cloud Platform (GCP) à l’aide de leurs centres de données sécurisés. Streamlit exploite de nombreuses fonctionnalités de sécurité, de confidentialité et de redondance intégrées à la plate-forme. GCP surveille en permanence ses centres de données pour détecter les risques et se soumet à des évaluations pour garantir la conformité aux normes de l’industrie. Les centres de données de GCP disposent de nombreuses accréditations, notamment ISO-27001, SOC 1 et SOC 2.</p>
 <ul class="simple">
 <li><p>Cloud privé virtuel</p></li>
 </ul>
-<p>Tous nos serveurs se trouvent dans un cloud privé virtuel (VPC) avec des pare-feu et des listes de contrôle d’accès réseau (ACL) pour permettre un accès externe à quelques points de terminaison API sélectionnés ; tous les autres services internes ne sont accessibles qu’au sein du VPC.</p>
+<p>Tous les serveurs se trouvent dans un cloud privé virtuel (VPC) avec des pare-feu et des listes de contrôle d’accès réseau (ACL) pour permettre un accès externe à quelques points de terminaison API sélectionnés. Tous les autres services internes ne sont accessibles qu’au sein du VPC.</p>
 <ul class="simple">
 <li><p>Chiffrement</p></li>
 </ul>
-<p>Toutes les applications Streamlit sont entièrement servies via HTTPS. Toutes les données envoyées vers ou depuis Streamlit sur l’Internet public sont cryptées en transit à l’aide d’un cryptage 256 bits. Nos points de terminaison d’API et d’application sont TLS uniquement (v1.2). Nous n’utilisons que des suites de chiffrement fortes et HTTP Secure Transport Security (HSTS) pour garantir que les navigateurs interagissent avec les applications Streamlit via HTTPS. Nous chiffrons également les données au repos à l’aide d’AES-256.</p>
+<p>Toutes les applications Streamlit sont entièrement servies via HTTPS. Toutes les données envoyées vers ou depuis Streamlit sur l’Internet public sont cryptées en transit à l’aide d’un cryptage 256 bits. Les points de terminaison d’API et d’application sont TLS uniquement (v1.2). Streamlit n’utilise que des suites de chiffrement fortes et HTTP Secure Transport Security (HSTS) pour garantir que les navigateurs interagissent avec les applications Streamlit via HTTPS. Il chiffre également les données au repos à l’aide d’AES-256.</p>
 <ul class="simple">
 <li><p>Autorisations et authentification</p></li>
 </ul>
-<p>L’accès aux données des clients est limité aux employés autorisés qui en ont besoin pour leur travail. Nous gérons un réseau d’entreprise à confiance zéro, de sorte qu’il n’y a pas de ressources d’entreprise ou de privilèges supplémentaires obtenus en étant sur le réseau interne de Streamlit. Nous utilisons une authentification unique à 2 facteurs (2FA) et appliquons des politiques de mots de passe solides pour garantir la protection de l’accès à tous les services liés au cloud.</p>
+<p>L’accès aux données des clients est limité aux employés autorisés qui en ont besoin pour leur travail. Il gére un réseau d’entreprise à confiance zéro, de sorte qu’il n’y a pas de ressources d’entreprise ou de privilèges supplémentaires obtenus en étant sur le réseau interne de Streamlit. Il utilise une authentification unique à 2 facteurs (2FA) et appliquons des politiques de mots de passe solides pour garantir la protection de l’accès à tous les services liés au cloud.</p>
 <ul class="simple">
 <li><p>Réponse aux incidents</p></li>
 </ul>
-<p>Nous avons un protocole interne pour gérer les événements de sécurité qui comprend des procédures d’escalade, une atténuation rapide et des post-mortem documentés. Nous informons rapidement les clients et publions les avis de sécurité sur <a class="reference external" href="https://streamlit.io/advisories">https://streamlit.io/advisories</a> .</p>
+<p>Il a un protocole interne pour gérer les événements de sécurité qui comprend des procédures d’escalade, une atténuation rapide et des post-mortem documentés. Il informe rapidement les clients et publie les avis de sécurité sur <a class="reference external" href="https://streamlit.io/advisories">https://streamlit.io/advisories</a> .</p>
 <ul class="simple">
 <li><p>Tests de pénétration</p></li>
 </ul>
@@ -273,11 +273,11 @@ Les données de ce framework sont hébergées sur un serveur informatique (stock
 <h2>Concurrents<a class="headerlink" href="#concurrents" title="Permalink to this headline">#</a></h2>
 <p>Les principales alternatives sont :</p>
 <ul class="simple">
-<li><p>Dash : Dash est un navigateur de documentation API et un gestionnaire d’extraits de code. Dash stocke des extraits de code et recherche instantanément des ensembles de documentation hors ligne pour plus de 150 API.</p></li>
-<li><p>Jupyter : Le Jupyter Notebook est une plateforme informatique interactive basée sur le Web. Le bloc-note combine du code en direct, des équations, du texte narratif, des visualisations, des tableaux interactifs et d’autres médias.</p></li>
-<li><p>Flask : Flask est conçu pour démarrer très rapidement et a été développé avec les meilleurs intentions à l’esprit.</p></li>
-<li><p>Shiny : Il s’agit d’un package R open source qui fournit un cadre web élégant et puissant pour créer des applications web. Il permet de transformer les analyses en application web interactives sans nécessiter de connaissance en HTML, CSS ou Javascript</p></li>
-<li><p>Bokeh : Bokeh est une bibliothèque de visualisation interactive pour les navigateurs Web modernes. Il fournit une construction élégante et concise de graphiques polyvalents et offre une interactivité haute performance sur des ensembles de données volumineux ou en continu.</p></li>
+<li><p><strong>Dash</strong> : Dash est un navigateur de documentation API et un gestionnaire d’extraits de code. Dash stocke des extraits de code et recherche instantanément des ensembles de documentation hors ligne pour plus de 150 API.</p></li>
+<li><p><strong>Jupyter</strong> : Le Jupyter Notebook est une plateforme informatique interactive basée sur le Web. Le bloc-note combine du code en direct, des équations, du texte narratif, des visualisations, des tableaux interactifs et d’autres médias.</p></li>
+<li><p><strong>Flask</strong> : Flask est conçu pour démarrer très rapidement et a été développé avec les meilleurs intentions à l’esprit.</p></li>
+<li><p><strong>Shiny</strong> : Il s’agit d’un package R open source qui fournit un cadre web élégant et puissant pour créer des applications web. Il permet de transformer les analyses en application web interactives sans nécessiter de connaissance en HTML, CSS ou Javascript</p></li>
+<li><p><strong>Bokeh</strong> : Bokeh est une bibliothèque de visualisation interactive pour les navigateurs Web modernes. Il fournit une construction élégante et concise de graphiques polyvalents et offre une interactivité haute performance sur des ensembles de données volumineux ou en continu.</p></li>
 </ul>
 </section>
 </section>

@@ -66,3 +66,11 @@ html_static_path = ['_static']
 # Logo
 html_logo = "./_static/images/streamlit_logo.svg"
 
+# Gif
+from sphinx.builders.html import StandaloneHTMLBuilder
+StandaloneHTMLBuilder.supported_image_types = [
+    'image/svg+xml',
+    'image/gif',
+    'image/png',
+    'image/jpeg'
+]

@@ -224,7 +224,7 @@
 <span class="linenos">13</span><span class="c1"># Efface les fichiers persistants du cache</span>
 <span class="linenos">14</span><span class="n">streamlit</span> <span class="n">cache</span> <span class="n">clear</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1"># Ouvre la documentation streamlit dan un navigateur</span>
+<span class="linenos">16</span><span class="c1"># Ouvre la documentation streamlit dans un navigateur</span>
 <span class="linenos">17</span><span class="n">streamlit</span> <span class="n">docs</span>
 <span class="linenos">18</span>
 <span class="linenos">19</span><span class="c1"># Pour connaître la version installée de streamlit</span>
@@ -234,8 +234,8 @@
 </section>
 <section id="commandes-magiques">
 <h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Permalink to this headline">#</a></h2>
-<p>Les commandes magiques sont une fonctionnalité de Streamlit qui vous permet d’écrire presque n’importe quoi (markdown, données, graphiques) sans avoir à taper une commande explicite.
-Placez simplement l’élément que vous souhaitez afficher sur sa propre ligne de code et il apparaîtra dans votre application.</p>
+<p>Les commandes magiques sont une fonctionnalité de Streamlit qui vous permet d’écrire presque n’importe quoi (markdown, données, graphiques) sans avoir à taper une commande explicite.</p>
+<p>Placer simplement l’élément que vous souhaitez afficher sur sa propre ligne de code et il apparaîtra dans votre application.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Magic commands implicitly</span>
 <span class="linenos">2</span><span class="c1"># call st.write().</span>
 <span class="linenos">3</span><span class="s1">'_This_ is some **Markdown***'</span>
@@ -256,36 +256,8 @@ Placez simplement l’élément que vous souhaitez afficher sur sa propre ligne 
 <span class="linenos"> 8</span><span class="n">st</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">''' e^{i\pi} + 1 = 0 '''</span><span class="p">)</span>
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="c1"># Permet de passer des arguments</span>
-<span class="linenos">11</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Most objects'</span><span class="p">)</span> <span class="c1"># df, err, func, keras!</span>
-<span class="linenos">12</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="s1">'st'</span><span class="p">,</span> <span class="s1">'is &lt;'</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="c1"># see *</span>
-<span class="linenos">13</span><span class="c1"># Afficher le texte dans la mise en forme du titre</span>
-<span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'My title'</span><span class="p">)</span>
-<span class="linenos">15</span>
-<span class="linenos">16</span><span class="c1"># Afficher le texte dans le format d'en-tête.</span>
-<span class="linenos">17</span><span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s1">'My header'</span><span class="p">)</span>
-<span class="linenos">18</span>
-<span class="linenos">19</span><span class="c1"># Afficher le texte en format de sous-en-tête</span>
-<span class="linenos">20</span><span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s1">'My sub'</span><span class="p">)</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="c1"># Affichez un bloc de code avec une coloration syntaxique facultative</span>
-<span class="linenos">23</span><span class="n">st</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">'for i in range(8): foo()'</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="afficher-les-donnees">
-<h2>Afficher les données<a class="headerlink" href="#afficher-les-donnees" title="Permalink to this headline">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Pour afficher un bloc de texte</span>
-<span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Fixed width text'</span><span class="p">)</span>
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="c1"># Pour afficher un texte façon markdown</span>
-<span class="linenos"> 5</span><span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s1">'_Markdown_'</span><span class="p">)</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="c1"># Affichez des expressions mathématiques</span>
-<span class="linenos"> 8</span><span class="n">st</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">''' e^{i\pi} + 1 = 0 '''</span><span class="p">)</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="c1"># Permet de passer des arguments</span>
-<span class="linenos">11</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Most objects'</span><span class="p">)</span> <span class="c1"># df, err, func, keras!</span>
-<span class="linenos">12</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="s1">'st'</span><span class="p">,</span> <span class="s1">'is &lt;'</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="c1"># see *</span>
+<span class="linenos">11</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Most objects'</span><span class="p">)</span> <span class="c1"># df, err, func!</span>
+<span class="linenos">12</span><span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">([</span><span class="s1">'st'</span><span class="p">,</span> <span class="s1">'is &lt;'</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="linenos">13</span><span class="c1"># Afficher le texte dans la mise en forme du titre</span>
 <span class="linenos">14</span><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'My title'</span><span class="p">)</span>
 <span class="linenos">15</span>
@@ -623,7 +595,6 @@ Placez simplement l’élément que vous souhaitez afficher sur sa propre ligne 
 <li><a class="reference internal" href="#ligne-de-commande">Ligne de commande</a></li>
 <li><a class="reference internal" href="#commandes-magiques">Commandes magiques</a></li>
 <li><a class="reference internal" href="#afficher-le-texte">Afficher le texte</a></li>
-<li><a class="reference internal" href="#afficher-les-donnees">Afficher les données</a></li>
 <li><a class="reference internal" href="#afficher-les-medias">Afficher les médias</a></li>
 <li><a class="reference internal" href="#ajouter-des-widgets-a-la-barre-laterale">Ajouter des widgets à la barre latérale</a></li>
 <li><a class="reference internal" href="#colonnes">Colonnes</a></li>

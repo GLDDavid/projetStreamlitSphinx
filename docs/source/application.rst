@@ -29,7 +29,7 @@ Nous allons maintenant ouvrir le terminal dans VSCode avec le raccourci clavier 
     activate
     cd../..
 
-Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports.
+Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports. Pour cela vous pouvez récupérer le dossier file_streamlit dans lequel vous allez trouver les fichiers nécessaire pour cette application.
 
 .. code-block:: python
     :linenos:
@@ -56,6 +56,9 @@ Nous pouvons maintenant faire une petite vérification afin de voir si streamlit
     streamlit run app.py
 
 A ce stade, une fenêtre doit s'ouvrir dans votre navigateur avec une application streamlit dans laquelle nous pouvons voir le formidable Hello world !
+
+Sur l’app streamlit, aller sur le menu burger à droite. Dans settings ou Réglages, cocher la case Run on save ou exécuter à la sauvegarde afin de relancer notre application à chaque sauvegarde dans VSCode.
+C'est quand même plus sympa.
 
 Il est possible de fermer l'application avec l'instruction ctrl c dans le terminal
 
@@ -119,7 +122,8 @@ Nous allons créer une sidebar afin de positionner différents widgets
 
 On peut constater que sur notre application une sidebar a été créée et que nous avons les 3 villes unique présente dans notre dataframe
 
-Vous allez maintenant faire la même chose avec les customer et le gender
+Vous allez maintenant faire la même chose avec les customer_type et le gender.
+Pour voir le code, il suffit de cliquer sur le bouton en dessous.
 
 .. toggle::
    
@@ -153,6 +157,8 @@ Avoir différents filtres c'est bien, mais encore faut-il que tout soit dynamiqu
     )
 
     st.dataframe(df_selection)
+    # supprimer l'autre st.dataframe(df)
+
 
 Un petit tour coté navigateur, afin de constater que tout fonctionne trés bien.
 Dès que l'on modifie nos filtres, le dataframe change.
@@ -314,7 +320,7 @@ Passons à notre graphique. On va pouvoir récupérer les valeurs de la colonne 
 Puis vous allez construire le prochain bar_chart
 
 .. toggle::
-   
+
     .. code-block:: python
         :linenos:
         :caption: app.py
@@ -411,7 +417,7 @@ Mais non, rassurez vous, nous allons juste masquer certains éléments comme par
 
 Enfin si on va en faire du **CSS** parce que j'aime beaucoup cela.
 Je vais vous envoyer un dossier **.streamlit** dans lequel il y a un fichier **config.toml**
-C'est dans ce fichier que l'on va pouvoir placer tout notre css, enfin les quleques lignes.
+C'est dans ce fichier que l'on va pouvoir placer tout notre css, enfin les quelques lignes.
 
 Il ne reste plus qu'à faire un ** ctrl c** dans le terminal et de relancer l'application afin de voir les changements de style.
 
@@ -422,7 +428,9 @@ Il ne reste plus qu'à faire un ** ctrl c** dans le terminal et de relancer l'ap
     streamlit run app.py
 
 Et voilà, vous avez maintenant une application streamlit fonctionelle. Vous pouvez utiliser HEROKU ou streamlit cloud pour que n'importe qui dans le monde utilise votre application.
-Simple et Efficace, c'est COOL Streamlit.
+Simple et Efficace.
+
+C'est COOL Streamlit.
 
 
 
