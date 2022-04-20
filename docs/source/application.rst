@@ -29,7 +29,7 @@ Nous allons maintenant ouvrir le terminal dans VSCode avec le raccourci clavier 
     activate
     cd../..
 
-Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports.
+Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports. Pour cela vous pouvez récupérer le dossier file_streamlit dans lequel vous allez trouver les fichiers nécessaire pour cette application.
 
 .. code-block:: python
     :linenos:
