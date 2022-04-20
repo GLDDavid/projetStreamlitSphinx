@@ -312,28 +312,25 @@ Bien faire attention à <strong>“””</strong></p>
 Donc on supprime tout et on va écrire :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>    <span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
 <span class="linenos"> 2</span>    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="linenos"> 3</span>    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="linenos"> 4</span>    <span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
-<span class="linenos"> 5</span>    <span class="kn">import</span> <span class="nn">pydeck</span> <span class="k">as</span> <span class="nn">pdk</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    <span class="n">DATE_TIME</span> <span class="o">=</span> <span class="s2">"date/time"</span>
+<span class="linenos"> 5</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span>    <span class="n">DATE_TIME</span> <span class="o">=</span> <span class="s2">"date/time"</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span>    <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Uber Pickups in New York City"</span><span class="p">)</span>
-<span class="linenos">11</span>    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
-<span class="linenos">12</span>            <span class="sd">"""</span>
-<span class="linenos">13</span><span class="sd">            This is a demo of streamlit</span>
-<span class="linenos">14</span><span class="sd">            """</span>
-<span class="linenos">15</span>    <span class="p">)</span>
-<span class="linenos">16</span>    <span class="nd">@st</span><span class="o">.</span><span class="n">cache</span><span class="p">(</span><span class="n">persist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="linenos">17</span>    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
-<span class="linenos">18</span>            <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"uber-raw-data-sep14.csv.gz"</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="n">nrows</span><span class="p">)</span>
-<span class="linenos">19</span>            <span class="n">lowercase</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span> <span class="n">lower</span><span class="p">()</span>
-<span class="linenos">20</span>            <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">lowercase</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="linenos">21</span>            <span class="n">data</span><span class="p">[</span><span class="n">DATE_TIME</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">DATE_TIME</span><span class="p">])</span>
-<span class="linenos">22</span>            <span class="k">return</span> <span class="n">data</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+<span class="linenos"> 7</span>    <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Uber Pickups in New York City"</span><span class="p">)</span>
+<span class="linenos"> 8</span>    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
+<span class="linenos"> 9</span>            <span class="sd">"""</span>
+<span class="linenos">10</span><span class="sd">            This is a demo of streamlit</span>
+<span class="linenos">11</span><span class="sd">            """</span>
+<span class="linenos">12</span>    <span class="p">)</span>
+<span class="linenos">13</span>    <span class="nd">@st</span><span class="o">.</span><span class="n">cache</span><span class="p">(</span><span class="n">persist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+<span class="linenos">15</span>            <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"uber-raw-data-sep14.csv.gz"</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="n">nrows</span><span class="p">)</span>
+<span class="linenos">16</span>            <span class="n">lowercase</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span> <span class="n">lower</span><span class="p">()</span>
+<span class="linenos">17</span>            <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">lowercase</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">18</span>            <span class="n">data</span><span class="p">[</span><span class="n">DATE_TIME</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">DATE_TIME</span><span class="p">])</span>
+<span class="linenos">19</span>            <span class="k">return</span> <span class="n">data</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"il est possible de voir le dataset que l'on a récupérer avec 'data', ici on aura que 100000 lignes"</span><span class="p">)</span>
