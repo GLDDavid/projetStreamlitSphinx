@@ -52,7 +52,10 @@ exclude_patterns = []
 #
 html_theme = 'furo'
 html_theme_options = {
-    'prev_next_buttons_location': 'bottom'
+    'prev_next_buttons_location': 'bottom',
+    "light_css_variables" : {
+        "color-brand-primary": "#AD0F15"
+    }
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
