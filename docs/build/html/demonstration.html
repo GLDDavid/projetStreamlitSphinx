@@ -2,8 +2,7 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Application" href="application.html" /><link rel="prev" title="CheatSheet !" href="cheatsheet.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Application" href="application.html" /><link rel="prev" title="CheatSheet !" href="cheatsheet.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
         <title>Demonstration - Streamlit documentation</title>
@@ -20,6 +19,7 @@
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
   --color-brand-primary: #AD0F15;
+  --color-toggle-details: #A52A2A;
   
   }
   @media not print {
@@ -197,9 +197,9 @@
           </label>
         </div>
         <article role="main">
-          <section id="demonstration">
+          <div class="section" id="demonstration">
 <h1>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this headline">#</a></h1>
-<section id="effet-waouh-garanti">
+<div class="section" id="effet-waouh-garanti">
 <h2>Effet WAOUH Garanti<a class="headerlink" href="#effet-waouh-garanti" title="Permalink to this headline">#</a></h2>
 <p>Vous l’avez compris, STREAMLIT est génial.
 Nous allons ici faire une démonstration de Streamlit.</p>
@@ -248,9 +248,9 @@ Il va quand même falloir importer streamlit</p>
 </pre></div>
 </div>
 <p>Petit raccourci clavier <strong>ctrl s</strong> pour sauvegarder dans VSCode</p>
-<figure class="align-center">
+<div class="figure align-center">
 <img alt="gif effet wahou" src="_images/unicorn-magic.gif"/>
-</figure>
+</div>
 <p>Nous allons avec un slider faire une opération mathématique comme par exemple le carré de x</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>    <span class="c1"># 2</span>
 <span class="linenos">2</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
@@ -372,10 +372,13 @@ Donc on supprime tout et on va écrire :</p>
 <span class="linenos">3</span>    <span class="n">hour</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'heure'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="figure align-center">
+<img alt="gif awesome" src="_images/jim-carrey-yes-sir.gif"/>
+</div>
 <p>Ah et bien NON en fait. C’est trop génial Streamlit.</p>
 <p>On passe à l’application ??</p>
-</section>
-</section>
+</div>
+</div>
 
         </article>
       </div>

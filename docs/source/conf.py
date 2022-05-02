@@ -14,7 +14,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'Streamlit'
@@ -54,7 +53,8 @@ html_theme = 'furo'
 html_theme_options = {
     'prev_next_buttons_location': 'bottom',
     "light_css_variables" : {
-        "color-brand-primary": "#AD0F15"
+        "color-brand-primary": "#AD0F15",
+        "color-toggle-details": "#A52A2A"
     }
 }
 

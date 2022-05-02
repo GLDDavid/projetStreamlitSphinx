@@ -79,8 +79,8 @@ Petit raccourci clavier **ctrl s** pour sauvegarder dans VSCode
 
 
 .. figure::  ./_static/images/unicorn-magic.gif
-    :alt: gif effet wahou
-    :align: center
+	:alt: gif effet wahou
+	:align: center
 
 
 Nous allons avec un slider faire une opération mathématique comme par exemple le carré de x
@@ -257,6 +257,9 @@ OK alors plutôt que d'avoir le slider juste au dessus de mon dataframe, si je f
 	#hour = st.slider('heure', 0, 23, 10)
 	hour = st.sidebar.slider('heure', 0, 23, 10)
 
+.. figure::  ./_static/images/jim-carrey-yes-sir.gif
+	:alt: gif awesome
+	:align: center
 Ah et bien NON en fait. C'est trop génial Streamlit.
 
 On passe à l'application ??

@@ -4,7 +4,7 @@ Présentation
 Historique de la solution
 -------------------------
 
-Streamlit est une bibliothèque Python open-source fondée par Adrien Treuille, Amanda Kelly et Thiago Teixeira en Décembre 2018.
+Streamlit est **une bibliothèque Python open-source** fondée par Adrien Treuille, Amanda Kelly et Thiago Teixeira en **Décembre 2018**.
 Le 1er octobre 2019, Streamlit reçoit un financement de 6 millions de dollars auprès des sociétés Bloomberg Beta et Gradient Ventures. Le 16 juin 2020, Bloomberg Beta, Daniel Gross, Elad Gil, Gradient Ventures et CGV Capital investissent 21 millions de dollars pour aider Streamlit à accélérer le développement de leur plateforme de création d’applications de données. Pendant cette levée de fonds, plus de 200 000 développeurs ont créé des applications en utilisant la plateforme.
 Le 7 avril 2021, Streamlit obtient une levée de fonds d’une valeur de 35 millions de dollars pour étendre leur plateforme de machine learning.
 Enfin tout récemment, Snowflake, un hébergeur de données dans le cloud, annonce l’acquisition de Streamlit pour 800 millions de dollars.
@@ -13,7 +13,7 @@ Enfin tout récemment, Snowflake, un hébergeur de données dans le cloud, annon
 Domaine couvert par la bibliothèque
 -----------------------------------
 
-Streamlit propose une plateforme pour le domaine du machine learning et de la data science. Et depuis peu, le domaine du Cloud avec Streamlit Cloud.
+Streamlit propose une plateforme pour le domaine du **machine learning** et de la **data science**. Et depuis peu, le domaine du **Cloud** avec Streamlit Cloud.
 
 Objectifs de la bibliothèque
 ----------------------------
@@ -23,7 +23,7 @@ Streamlit est une bibliothèque Python open-source qui permet de créer et de pa
 Communauté
 ----------
 
-La librairie est mise à jour régulièrement. On peut voir que la dernière version, la 1.7, a été déployée le 2 mars de cette année (nous sommes en 2022). Elle est maintenue par Jon Roes, Thiago Teixeira, Ken McGrady et Adrien Treuille.
+La librairie est mise à jour régulièrement. On peut voir que la dernière version, la 1.8, a été déployée le 24 mars de cette année (nous sommes en 2022). Elle est maintenue par Jon Roes, Thiago Teixeira, Ken McGrady et Adrien Treuille.
 
 * Thiago Teixeira est le fondateur de Streamlit.
 * Adrien Treuille est le co-fondateur et le CEO de Streamlit
@@ -37,16 +37,15 @@ Présentation de la bibliothèque
 
 C’est le framework d’application pour les équipes de *Deep/Machine Learning* et de *Data Science*. 
 Streamlit propose des APIs afin de s’intégrer à d’autres librairies informatiques comme Python et TensorFlow. 
-Ces intégrations permettent par exemple de se connecter à une base de données, d’échanger des données, ou bien encore de synchroniser des fichiers entre plusieurs programmes informatiques via une extension, un plugin, ou une API (application programming interface / interface de programmation).
+Ces intégrations permettent par exemple de **se connecter à une base de données, d’échanger des données, ou bien encore de synchroniser des fichiers** entre plusieurs programmes informatiques via une extension, un plugin, ou une API (application programming interface / interface de programmation).
 
 **Streamlit** peut se connecter à plus de 11 librairies afin de faciliter les échanges de données entre applications, d’améliorer le flux de travail, et de gagner en productivité.
 
-Framework en mode SaaS, Streamlit est donc compatible avec la plupart des systèmes d’informations d’entreprises ainsi qu’avec la plupart des systèmes d’exploitation (OS) comme Windows, Mac OS et Linux car il est accessible depuis un navigateur web (Chrome, Firefox, Safari …). 
+Framework en mode SaaS, Streamlit est donc compatible avec la plupart des systèmes d’informations d’entreprises ainsi qu’avec la plupart des systèmes d’exploitation (OS) comme Windows, Mac OS et Linux car il est accessible depuis un navigateur web (Edge, Chrome, Firefox, Safari …). 
 **Streamlit** est également accessible à distance (bureau, domicile, en déplacement…) depuis de nombreux appareils mobiles, aussi bien la technologie iOS qu'Android.
 
 * Assistance technique
 L’éditeur qui a développé ce programme informatique offre un support technique ainsi qu’une documentation sur le site officiel. Vous pourrez y retrouver un guide technique complet, une FAQ des questions fréquemment posées, ainsi qu’un forum ou un service support par tickets.
-
 
 * Avantages
 
