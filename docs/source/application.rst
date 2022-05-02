@@ -11,15 +11,17 @@ Création de l'environnement
 
 Pour commencer il va falloir créer un dossier sur notre bureau que nous allons appeler :
 	**streamlit_supermarket**
-Dans ce dossier nous allons placer le csv ainsi que le requirements.txt que je vais vous envoyer.
-Puis on va ouvrir ce dossier avec VSCode.
+Sur Github, vous pouvez récupérer le dossier file_streamlit dans lequel vous allez trouver les fichiers nécessaires à cette application.
+
+Dans le dossier streamlit_supermarket, nous allons placer le csv ainsi que le requirements.txt .
+Puis nous allons l'ouvrir avec VSCode.
 
 Dans VSCode, vous allez créer un fichier:
 	**app.py**
 Que l’on va laisser vide pour le moment.
 
 Nous allons maintenant ouvrir le terminal dans VSCode avec le raccourci clavier **ctrl ù** et nous allons créer un environ virtuel.
- 
+
 .. code-block:: python
     :linenos:
 
@@ -29,7 +31,7 @@ Nous allons maintenant ouvrir le terminal dans VSCode avec le raccourci clavier 
     activate
     cd../..
 
-Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports. Pour cela vous pouvez récupérer le dossier file_streamlit dans lequel vous allez trouver les fichiers nécessaire pour cette application.
+Après avoir notre environnement virtuel, nous allons pouvoir effectuer  nos imports.
 
 .. code-block:: python
     :linenos:
@@ -49,18 +51,19 @@ Dans app.py nous allons écrire ce code.
     st.write('Hello world !')
 
 Nous pouvons maintenant faire une petite vérification afin de voir si streamlit est bien importé.
+Dans le terminal, entrer le code suivant:
 
 .. code-block:: python
     :linenos:
 
     streamlit run app.py
 
-A ce stade, une fenêtre doit s'ouvrir dans votre navigateur avec une application streamlit dans laquelle nous pouvons voir le formidable Hello world !
+A ce stade, une fenêtre doit s'ouvrir dans votre navigateur avec une application streamlit dans laquelle nous pouvons voir le formidable *Hello world !*
 
 Sur l’app streamlit, aller sur le menu burger à droite. Dans settings ou Réglages, cocher la case Run on save ou exécuter à la sauvegarde afin de relancer notre application à chaque sauvegarde dans VSCode.
 C'est quand même plus sympa.
 
-Il est possible de fermer l'application avec l'instruction ctrl c dans le terminal
+Il est possible de fermer l'application avec l'instruction ctrl c dans le terminal.
 
 .. code-block:: python
     :linenos:
@@ -95,7 +98,7 @@ Notre environnement est créé et il fonctionne bien. Nous allons maintenant pou
     st.dataframe(df)
 
 
-On retourne dans le terminal et on relance l'application
+On retourne dans le terminal et on relance l'application.
 
 .. code-block:: python
     :linenos:
@@ -105,7 +108,7 @@ On retourne dans le terminal et on relance l'application
 
 **Sidebar**
 
-Nous allons créer une sidebar afin de positionner différents widgets
+Nous allons créer une sidebar afin de positionner différents widgets.
 
 .. code-block:: python
     :linenos:
@@ -120,13 +123,14 @@ Nous allons créer une sidebar afin de positionner différents widgets
             default=df['City'].unique()
     )
 
-On peut constater que sur notre application une sidebar a été créée et que nous avons les 3 villes unique présente dans notre dataframe
+On peut constater que sur notre application une sidebar a été créée et que nous avons les 3 villes unique présentes dans notre dataframe.
 
 Vous allez maintenant faire la même chose avec les customer_type et le gender.
-Pour voir le code, il suffit de cliquer sur le bouton en dessous.
+
+*Pour voir le code, il suffit de cliquer sur le bouton en dessous*.
 
 .. toggle::
-   
+
     .. code-block:: python
         :linenos:
         :caption: app.py
@@ -145,7 +149,7 @@ Pour voir le code, il suffit de cliquer sur le bouton en dessous.
         )
 
 
-Avoir différents filtres c'est bien, mais encore faut-il que tout soit dynamique. Pour cela, il va falloir lier nos filtres à notre dataframe
+Avoir différents filtres c'est bien, mais encore faut-il que tout soit dynamique. Pour cela, il va falloir lier nos filtres à notre dataframe.
 
 .. code-block:: python
     :linenos:
@@ -179,7 +183,7 @@ Occupons nous déjà du titre.
     st.markdown("##")
 
 
-On peut maintenant créer nos indicateurs, à savoir le total des ventes, la note moyenne, la note star et la vente moyenne par transaction
+On peut maintenant créer nos indicateurs, à savoir le total des ventes, la note moyenne, la note star et la vente moyenne par transaction.
 
 .. code-block:: python
     :linenos:
@@ -193,7 +197,7 @@ On peut maintenant créer nos indicateurs, à savoir le total des ventes, la not
     vente_moyenne_par_transaction = round(df_selection['Total'].mean(), 2)
 
 
-Pour afficher correctement le tout, on va créer des conteneurs grâce à columns
+Pour afficher correctement le tout, on va créer des conteneurs grâce à **columns**.
 
 .. code-block:: python
     :linenos:
@@ -221,14 +225,24 @@ Et nous pouvons faire un joli trait en dessous pour bien séparer le tout
 
     st.markdown("---")
 
-A ce stade on peut voir qu’avec la sélection de différents filtres nos kpi changent correctement. C'est formidable !!!
+A ce stade on peut voir qu’avec la sélection de différents filtres nos kpi changent correctement.
+
+**C'est formidable !!!**
+
+.. figure::  ./_static/images/borat_danse.gif
+    :alt: borat danse
+    :align: center
+
+.. figure::  ./_static/images/victoire_borat.gif
+    :alt: borat victoire
+    :align: center
 
 
 **BAR CHART**
 
-Nous allons maintenant créer 2 graphiques en barres 'bar_chart'
+Nous allons maintenant créer 2 graphiques en barres 'bar_chart'.
 
-Nous commençons par récupérer les valeurs dans mon dataframe
+Nous commençons par récupérer les valeurs dans le dataframe.
 
 .. code-block:: python
     :linenos:
@@ -241,7 +255,7 @@ Nous commençons par récupérer les valeurs dans mon dataframe
     )
 
 
-Puis nous allons concevoir le bar_chart et on va afficher tout ça avec plotly_chart
+Puis nous allons concevoir le bar_chart et on va afficher tout ça avec plotly_chart.
 
 .. code-block:: python
     :linenos:
@@ -260,7 +274,7 @@ Puis nous allons concevoir le bar_chart et on va afficher tout ça avec plotly_c
     st.plotly_chart(fig_ventes_produits)
 
 
-Un peu de customisation pour le coté joli
+Un peu de customisation pour le coté joli.
 
 .. code-block:: python
     :linenos:
@@ -275,7 +289,7 @@ Un peu de customisation pour le coté joli
 
 Passons à notre deuxième graphiques.
 Il va concerner les ventes en fonction des heures.
-Pour cela Pandas est motre ami et nous pouvons créer une nouvelle colonne à partir de la colonne Time de mon dataframe
+Pour cela Pandas est notre ami et nous pouvons créer une nouvelle colonne à partir de la colonne Time du dataframe.
 
 .. code-block:: python
     :linenos:
@@ -287,8 +301,10 @@ Pour cela Pandas est motre ami et nous pouvons créer une nouvelle colonne à pa
 
 
 Il va falloir placer ce code juste aprés le read_csv. Cependant, pour éviter que notre code précédent ne se reproduise encore et encore
-(Mais Ça continue encore et encore! C'est que le début d'accord, d'accord!
-Merci Françis Cabrel)
+
+(*Mais Ça continue encore et encore! C'est que le début d'accord, d'accord!
+Merci Françis Cabrel*)
+
 Nous allons le placer dans une fonction, on va s'occuper du cache et on n'oublie d'appeller la fonction.
 
 .. code-block:: python
@@ -317,7 +333,7 @@ Passons à notre graphique. On va pouvoir récupérer les valeurs de la colonne 
     ventes_par_heures = df_selection.groupby(by=['hour']).sum()[['Total']]
 
 
-Puis vous allez construire le prochain bar_chart
+Puis vous allez construire le prochain bar_chart.
 
 .. toggle::
 
@@ -343,8 +359,9 @@ Puis vous allez construire le prochain bar_chart
 
 
 **Mazette! Que c'est beau**.
-Mais la disposition de ces graph ne me plait pas. Ils sont l'un en dessous de l'autre et j'aimerai les avoir l'un à coté de l'autre.
-Pour cela, on va déjà supprimer les 2 st.plotly_chart
+
+Mais la disposition de ces graphs ne me plait pas. Ils sont l'un en dessous de l'autre et j'aimerai les avoir l'un à coté de l'autre.
+Pour cela, on va déjà supprimer les 2 st.plotly_chart.
 
 .. code-block:: python
     :linenos:
@@ -355,7 +372,7 @@ Pour cela, on va déjà supprimer les 2 st.plotly_chart
     st.plotly_chart(fig_vente_heures)
 
 
-Nous allons construire 2 colonnes et placer chaque graph dans une colonne
+Nous allons construire 2 colonnes et placer chaque graph dans une colonne.
 
 .. code-block:: python
     :linenos:
@@ -365,7 +382,7 @@ Nous allons construire 2 colonnes et placer chaque graph dans une colonne
     left_column, right_column = st.columns(2)
 
 
-On place dans la colonne de gauche le fig_vente_heures
+On place dans la colonne de gauche le fig_vente_heures.
 
 .. code-block:: python
     :linenos:
@@ -375,7 +392,7 @@ On place dans la colonne de gauche le fig_vente_heures
     left_column.plotly_chart(fig_vente_heures, use_container_witdh=True)
 
 
-Et à droite le fig_ventes_produits
+Et à droite le fig_ventes_produits.
 
 .. code-block:: python
     :linenos:
@@ -398,7 +415,7 @@ Soit ces 3 lignes de code :
 
 
 Passons maintenant au **CSS**.
-Mais non, rassurez vous, nous allons juste masquer certains éléments comme par exemple le menu burger, ou la mention fait avec streamlit dans le footer.
+Mais non, rassurez vous, nous allons juste masquer certains éléments comme par exemple le *menu burger*, ou la mention *fait avec streamlit* dans le footer.
 
 .. code-block:: python
     :linenos:
@@ -415,8 +432,8 @@ Mais non, rassurez vous, nous allons juste masquer certains éléments comme par
     """
     st.markdown(st_style, unsafe_allow_html=True)
 
-Enfin si on va en faire du **CSS** parce que j'aime beaucoup cela.
-Je vais vous envoyer un dossier **.streamlit** dans lequel il y a un fichier **config.toml**
+Enfin si, nous allons faire du **CSS** parce que j'aime beaucoup cela.
+Dans le dossier **file_streamlit**, vous avez **.streamlit** dans lequel on retrouve le **config.toml** .
 C'est dans ce fichier que l'on va pouvoir placer tout notre css, enfin les quelques lignes.
 
 Il ne reste plus qu'à faire un ** ctrl c** dans le terminal et de relancer l'application afin de voir les changements de style.
@@ -427,11 +444,15 @@ Il ne reste plus qu'à faire un ** ctrl c** dans le terminal et de relancer l'ap
     ctrl c
     streamlit run app.py
 
-Et voilà, vous avez maintenant une application streamlit fonctionelle. Vous pouvez utiliser HEROKU ou streamlit cloud pour que n'importe qui dans le monde utilise votre application.
+Et voilà, vous avez maintenant une application streamlit fonctionnelle. Vous pouvez utiliser HEROKU ou streamlit cloud pour que n'importe qui dans le monde utilise votre application.
 Simple et Efficace.
 
 C'est COOL Streamlit.
 
+
+.. figure::  ./_static/images/the_end_bean.gif
+    :alt: the end Mr bean
+    :align: center
 
 
 
