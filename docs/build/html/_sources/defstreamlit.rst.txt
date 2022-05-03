@@ -22,6 +22,22 @@ Technologies
 
 Il est également possible d'intégrer des éléments `HTML et Javascript <https://stackoverflow.com/questions/67977391/can-i-display-custom-javascript-in-streamlit-web-app>`_ avec Streamlit.
 
+Liste des librairies compatibles à Streamlit : 
+
+- `Bokeh <https://bokeh.org/>`_ : Bibliothèque de visualisation de données
+- `Altair <https://altair-viz.github.io/>`_ : Visualisation déclarative en Python
+- `Pytorch <https://pytorch.org/>`_ : Bibliothèque logicielle Python open source de machine learning
+- `OpenCV <https://opencv.org/>`_ : Bibliothèque graphique open source de traitements d'image en temps réel
+- `DECK.GL <https://deckgl.readthedocs.io/en/latest/>`_ : Analyse visuelle pour explorer de grands ensembles de données
+- `Pandas <https://pandas.pydata.org/>`_ : Bibliothèque permettant la manipulation et l'analyse des données
+- `Vega-Lite <https://vega.github.io/vega-lite/>`_ : Bibliothèque de haut niveau de graphiques interactifs
+- `matplotlib <https://matplotlib.org/>`_ : Bibliothèque destinée à tracer et visualiser des données sous formes de graphiques
+- `NumPy <https://numpy.org/>`_ : Bibliothèque destinée à manipuler des matrices ou tableaux multidimensionnels ainsi que des fonctions mathématiques opérant sur ces tableaux
+- `scikit-learn <https://scikit-learn.org/stable/>`_ : Bibliothèque open source destinée à l'apprentissage automatique
+- `TensorFlow <https://www.tensorflow.org/>`_ : Bibliothèque open source destinée à l'apprentissage automatique
+- `plotly <https://plotly.com/python/>`_ : Bibliothèque graphique permettant de créer des graphiques interactifs 
+- `Keras <https://keras.io/>`_ : Bibliothèque Python open source pour développer et évaluer des modèles de deep learning.
+
 Contraintes
 -----------
 
