@@ -50,8 +50,6 @@ L’éditeur qui a développé ce programme informatique offre un support techni
 * Avantages
 
 	- Partage des apllications
-	- Configuration de l’authentification unique (SSO)
-	- Authentification unique Okta via SAML
 	- Dépannage
 
 * Inconvénients
