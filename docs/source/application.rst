@@ -1,8 +1,7 @@
 Application
 ============
 
-
-Nous allons concevoir un dashboard afin de visualiser différents indicateurs concernant notre supermarché.
+Pour les plus courageux d'entre vous, nous allons concevoir un dashboard afin de visualiser différents indicateurs concernant notre supermarché !
 
 
 Création de l'environnement
