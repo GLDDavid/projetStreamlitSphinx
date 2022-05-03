@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Demonstration" href="demonstration.html" /><link rel="prev" title="Fonctionnalités" href="schema.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Demonstration" href="demonstration.html" /><link rel="prev" title="Fonctionnalités" href="schema.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
         <title>CheatSheet ! - Streamlit documentation</title>
@@ -197,17 +198,17 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="cheatsheet">
+          <section id="cheatsheet">
 <h1>CheatSheet !<a class="headerlink" href="#cheatsheet" title="Permalink to this headline">#</a></h1>
-<div class="section" id="installer-et-importer">
+<section id="installer-et-importer">
 <h2>Installer et importer<a class="headerlink" href="#installer-et-importer" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">pip</span> <span class="n">install</span> <span class="n">streamlit</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ligne-de-commande">
+</section>
+<section id="ligne-de-commande">
 <h2>Ligne de commande<a class="headerlink" href="#ligne-de-commande" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Aide</span>
 <span class="linenos"> 2</span><span class="n">streamlit</span> <span class="o">--</span><span class="n">help</span>
@@ -231,8 +232,8 @@
 <span class="linenos">20</span><span class="n">streamlit</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="commandes-magiques">
+</section>
+<section id="commandes-magiques">
 <h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Permalink to this headline">#</a></h2>
 <p>Les commandes magiques sont une fonctionnalité de Streamlit qui vous permet d’écrire presque n’importe quoi (markdown, données, graphiques) sans avoir à taper une commande explicite.</p>
 <p>Placer simplement l’élément que vous souhaitez afficher sur sa propre ligne de code et il apparaîtra dans votre application.</p>
@@ -243,8 +244,8 @@
 <span class="linenos">5</span><span class="s1">'dataframe:'</span><span class="p">,</span> <span class="n">my_data_frame</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="afficher-le-texte">
+</section>
+<section id="afficher-le-texte">
 <h2>Afficher le texte<a class="headerlink" href="#afficher-le-texte" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Pour afficher un bloc de texte</span>
 <span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Fixed width text'</span><span class="p">)</span>
@@ -271,8 +272,8 @@
 <span class="linenos">23</span><span class="n">st</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">'for i in range(8): foo()'</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="afficher-les-medias">
+</section>
+<section id="afficher-les-medias">
 <h2>Afficher les médias<a class="headerlink" href="#afficher-les-medias" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Afficher une image ou une liste d'images.</span>
 <span class="linenos">2</span><span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s1">'./header.png'</span><span class="p">)</span>
@@ -284,8 +285,8 @@
 <span class="linenos">8</span><span class="n">st</span><span class="o">.</span><span class="n">video</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ajouter-des-widgets-a-la-barre-laterale">
+</section>
+<section id="ajouter-des-widgets-a-la-barre-laterale">
 <h2>Ajouter des widgets à la barre latérale<a class="headerlink" href="#ajouter-des-widgets-a-la-barre-laterale" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Afficher un widget de bouton radio</span>
 <span class="linenos">2</span><span class="c1"># dans la sidebar</span>
@@ -296,8 +297,8 @@
 <span class="linenos">7</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">st</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s1">'Select one:'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="colonnes">
+</section>
+<section id="colonnes">
 <h2>Colonnes<a class="headerlink" href="#colonnes" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># 2 colonnes égales:</span>
 <span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -315,8 +316,8 @@
 <span class="linenos">14</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">st</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s1">'Select one:'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="flux-de-controle">
+</section>
+<section id="flux-de-controle">
 <h2>Flux de contrôle<a class="headerlink" href="#flux-de-controle" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Arreter l’execution  immédiatement:</span>
 <span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
@@ -332,8 +333,8 @@
 <span class="linenos">12</span><span class="o">&gt;&gt;&gt;</span>   <span class="n">st</span><span class="o">.</span><span class="n">form_submit_button</span><span class="p">(</span><span class="s1">'Login'</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="afficher-des-widgets-interactifs">
+</section>
+<section id="afficher-des-widgets-interactifs">
 <h2>Afficher des widgets interactifs<a class="headerlink" href="#afficher-des-widgets-interactifs" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Afficher un widget bouton</span>
 <span class="linenos"> 2</span><span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s1">'Click me'</span><span class="p">)</span>
@@ -395,8 +396,8 @@
 <span class="linenos">58</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">'Pick a number'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="muter-les-donnees">
+</section>
+<section id="muter-les-donnees">
 <h2>Muter les données<a class="headerlink" href="#muter-les-donnees" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Ajouter des lignes à un dataframe.</span>
 <span class="linenos">2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
@@ -407,15 +408,15 @@
 <span class="linenos">7</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="code-d-affichage">
+</section>
+<section id="code-d-affichage">
 <h2>Code d’affichage<a class="headerlink" href="#code-d-affichage" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">echo</span><span class="p">():</span>
 <span class="linenos">2</span><span class="gp">&gt;&gt;&gt; </span>  <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Code will be executed and printed'</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="espaces-reserves-aide-et-options">
+</section>
+<section id="espaces-reserves-aide-et-options">
 <h2>Espaces réservés, aide et options<a class="headerlink" href="#espaces-reserves-aide-et-options" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Remplacer n’importe quel élément.</span>
 <span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">element</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>
@@ -437,10 +438,10 @@
 <span class="linenos">18</span><span class="n">st</span><span class="o">.</span><span class="n">experimental_set_query_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="optimiser-les-performances">
+</section>
+<section id="optimiser-les-performances">
 <h2>Optimiser les performances<a class="headerlink" href="#optimiser-les-performances" title="Permalink to this headline">#</a></h2>
-<div class="section" id="mise-en-cache-heritee">
+<section id="mise-en-cache-heritee">
 <h3>Mise en cache héritée<a class="headerlink" href="#mise-en-cache-heritee" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@st</span><span class="o">.</span><span class="n">cache</span>
 <span class="linenos"> 2</span><span class="gp">... </span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
@@ -455,8 +456,8 @@
 <span class="linenos">11</span><span class="gp">&gt;&gt;&gt; </span><span class="n">d3</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">ref2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="objets-de-donnees-en-cache">
+</section>
+<section id="objets-de-donnees-en-cache">
 <h3>Objets de données en cache<a class="headerlink" href="#objets-de-donnees-en-cache" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Par exemple : Calcul de dataframe, stockage des données téléchargées, …</span>
 <span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="nd">@st</span><span class="o">.</span><span class="n">experimental_memo</span>
@@ -476,8 +477,8 @@
 <span class="linenos">16</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">experimental_memo</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="mettre-en-cache-des-objets-autres-que-des-donnees">
+</section>
+<section id="mettre-en-cache-des-objets-autres-que-des-donnees">
 <h3>Mettre en cache des objets autres que des données<a class="headerlink" href="#mettre-en-cache-des-objets-autres-que-des-donnees" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Exemple : Session TensorFlow, connexion à la base de données, ...</span>
 <span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="nd">@st</span><span class="o">.</span><span class="n">experimental_singleton</span>
@@ -497,9 +498,9 @@
 <span class="linenos">16</span><span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">experimental_singleton</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="afficher-la-progression-et-l-etat">
+</section>
+</section>
+<section id="afficher-la-progression-et-l-etat">
 <h2>Afficher la progression et l’état<a class="headerlink" href="#afficher-la-progression-et-l-etat" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">spinner</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">'In progress'</span><span class="p">):</span>
 <span class="linenos"> 2</span><span class="gp">&gt;&gt;&gt; </span>  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -530,8 +531,8 @@
 <span class="linenos">27</span><span class="go">st.exception(e)</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>

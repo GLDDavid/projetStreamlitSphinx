@@ -60,7 +60,6 @@ L’éditeur qui a développé ce programme informatique offre un support techni
     - Taille de l'entrée des données (50 mb max en téléchargement)
     - Support limité pour la vidéo/animation
     - On ne peut pas construire une application avec des fonctionnalités comme :
-        - Authentification des utilisateurs
         - Abonnement à la newsletter
         - Interaction entre utilisateurs
     - Streamlit Cloud gratuit à payant
